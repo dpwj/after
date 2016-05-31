@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('fullSail')
+    .module('after')
     .run(runBlock);
 
   /** @ngInject */

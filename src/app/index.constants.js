@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('fullSail')
+    .module('after')
     .constant('malarkey', malarkey)
     .constant('moment', moment);
 

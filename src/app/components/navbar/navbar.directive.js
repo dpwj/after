@@ -2,11 +2,11 @@
   'use strict';
 
   angular
-    .module('fullSail')
-    .directive('acmeNavbar', acmeNavbar);
+    .module('after')
+    .directive('afNavbar', afNavbar);
 
   /** @ngInject */
-  function acmeNavbar() {
+  function afNavbar() {
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/navbar/navbar.html',
@@ -22,10 +22,7 @@
 
     /** @ngInject */
     function NavbarController(moment) {
-      var vm = this;
 
-      // "vm.creationDate" is available by directive option "bindToController: true"
-      vm.relativeDate = moment(vm.creationDate).fromNow();
     }
   }
 

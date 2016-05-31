@@ -1,0 +1,1013 @@
+/****************************************
+  Reset
+*****************************************/
+html {
+  color: #777;
+}
+
+* {
+  box-sizing: border-box;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100%;
+}
+
+img {
+  border: 0;
+}
+
+a:focus, a:active, button:focus {
+  outline: 0;
+}
+
+/****************************************
+DEFAULTS
+*****************************************/
+body {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Volkhov', serif;
+  font-size: 12pt;
+  color: #0A2126;
+}
+
+button {
+  background-color: #A6FFD4;
+  border: none;
+  padding: 10px;
+}
+
+button:hover {
+  background-color: rgba(10, 33, 38, 0.9);
+  color: #7DE0B0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 56pt;
+}
+
+h2 {
+  font-size: 32pt;
+}
+
+@media (max-width: 960px) {
+  h2 {
+    font-size: 14;
+  }
+}
+
+h3 {
+  font-size: 22pt;
+}
+
+@media (max-width: 960px) {
+  h3 {
+    font-size: 16pt;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 28pt;
+}
+
+.panel > div {
+  width: 960px;
+  margin: auto;
+  overflow: hidden;
+}
+
+@media (max-width: 960px) {
+  .panel > div {
+    width: 850px;
+  }
+}
+
+@media (max-width: 850px) {
+  .panel > div {
+    width: 750px;
+  }
+}
+
+@media (max-width: 750px) {
+  .panel > div {
+    width: 400px;
+  }
+}
+
+@media (max-width: 750px) {
+  .panel .userInfo {
+    margin-top: 200px;
+    padding: 20px;
+  }
+}
+
+hr {
+  border: 1px dashed #aaa;
+}
+
+section {
+  padding: 100px 0;
+}
+
+@media (max-width: 960px) {
+  section {
+    padding: 100px 50px;
+  }
+}
+
+@media (max-width: 850px) {
+  section {
+    padding: 50px 0;
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  width: 300px;
+  border: 1px solid #aaa;
+  padding: 5px;
+}
+
+.hero {
+  height: 500px;
+  width: 100%;
+  position: relative;
+}
+
+@media (max-width: 625px) {
+  .hero {
+    display: none;
+  }
+}
+
+.hero section {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.hero section h1 {
+  color: #fff;
+  margin-top: 50px;
+}
+
+@media (max-width: 1150px) {
+  .hero section h1 {
+    font-size: 46pt;
+  }
+}
+
+@media (max-width: 960px) {
+  .hero section h1 {
+    font-size: 32pt;
+  }
+}
+
+.events img {
+  width: 400px;
+}
+
+.hero {
+  background: radial-gradient(rgba(50, 50, 50, 0.5), rgba(60, 50, 50, 0.5)), url("/images/page-portfolio-disaster-response.jpg");
+  background-size: cover;
+}
+
+.aboutUs, .eventTypes {
+  background-color: #f1f1f1;
+}
+
+.aboutUs {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.aboutUs figure {
+  width: 33%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: content;
+}
+
+@media (max-width: 850px) {
+  .aboutUs figure {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+.aboutUs figure img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+@media (max-width: 750px) {
+  .aboutUs figure img {
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.aboutUs figcaption {
+  width: 80%;
+  margin: auto;
+}
+
+@media (max-width: 750px) {
+  .aboutUs figcaption {
+    width: 100%;
+  }
+}
+
+.aboutUs figcaption h3 {
+  font-size: 22pt;
+}
+
+.aboutInfo {
+  overflow: hidden;
+  margin: auto;
+}
+
+@media (max-width: 960px) {
+  .aboutInfo {
+    width: 80%;
+  }
+}
+
+.featuredEvent {
+  padding-top: 150px;
+}
+
+.featuredEvent h2 {
+  display: inline-block;
+}
+
+.featuredEvent h2 + button {
+  float: right;
+}
+
+.smallLeftColumn {
+  width: 25%;
+  float: left;
+}
+
+@media (max-width: 960px) {
+  .smallLeftColumn {
+    width: 20%;
+  }
+}
+
+@media (max-width: 850px) {
+  .smallLeftColumn {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+.smallLeftColumn img {
+  width: 100%;
+  margin-left: -50px;
+}
+
+@media (max-width: 850px) {
+  .smallLeftColumn img {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+.smallLeftColumn figcaption {
+  margin-top: 50px;
+  padding-right: 50px;
+}
+
+@media (max-width: 960px) {
+  .smallLeftColumn figcaption {
+    padding: 0;
+  }
+}
+
+.smallLeftColumn figcaption .fa {
+  font-size: 18pt;
+  padding: 0 9px 0 0;
+}
+
+.smallLeftColumn span {
+  padding: 10px 0;
+}
+
+.largeRightColumn {
+  width: 75%;
+  float: right;
+  overflow: hidden;
+}
+
+@media (max-width: 960px) {
+  .largeRightColumn {
+    width: 60%;
+    margin-right: 100px;
+  }
+}
+
+@media (max-width: 850px) {
+  .largeRightColumn {
+    width: 100%;
+    float: left;
+  }
+}
+
+@media (max-width: 750px) {
+  .largeRightColumn {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    float: left;
+  }
+}
+
+.largeRightColumn img {
+  width: 100%;
+}
+
+@media (max-width: 960px) {
+  .largeRightColumn img {
+    width: 100%;
+  }
+}
+
+.largeRightColumn figure {
+  width: 32%;
+  vertical-align: top;
+  display: inline-block;
+}
+
+@media (max-width: 750px) {
+  .largeRightColumn figure {
+    width: 100%;
+    float: left;
+    margin-top: 50px;
+  }
+}
+
+.largeRightColumn figure img {
+  width: 100%;
+}
+
+@media (max-width: 750px) {
+  .largeRightColumn figure img {
+    height: 100%;
+    text-align: center;
+  }
+}
+
+.largeRightColumn figure figcaption {
+  padding: 10px 20px;
+  background-color: #fff;
+}
+
+
+
+
+.outsideModal {
+  width: 1200px;
+  border: 1px solid #000;
+  overflow: hidden;
+  transform: translateY(-150px);
+}
+
+@media (max-width: 625px) {
+  .outsideModal {
+    padding: 0px;
+    transform: translateY(0px);
+    overflow: hidden;
+  }
+}
+
+.outsideModal > div {
+  background-color: #fff;
+  overflow: hidden;
+  padding: 100px;
+}
+
+@media (max-width: 750px) {
+  .outsideModal > div {
+    padding: 0px;
+  }
+}
+
+.outsideModal form {
+  width: 55%;
+  float: left;
+  border-right: 1px dashed #aaa;
+}
+
+.outsideModal form .error {
+  float: left;
+  color: red;
+}
+
+@media (max-width: 850px) {
+  .outsideModal form {
+    width: 100%;
+    border-right: 0;
+  }
+}
+
+@media (max-width: 750px) {
+  .outsideModal form {
+    padding: 40px;
+  }
+}
+
+.outsideModal form h3 {
+  margin-bottom: 1px;
+}
+
+.outsideModal form p {
+  margin: 0 0 20px 0;
+}
+
+.outsideModal form button {
+  margin: 20px 20px 20px 0;
+}
+
+.outsideModal form input {
+  width: 300px;
+}
+
+.outsideModal .insideModal .formHeader {
+  display: inline;
+  margin: auto;
+  text-align: center;
+}
+
+.outsideModal .insideModal .formHeader h3 {
+  padding-bottom: 20px;
+}
+
+.outsideModal .insideModal form {
+  width: 40%;
+  float: none;
+  border: none;
+  margin: auto;
+}
+
+.outsideModal .insideModal form span a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.outsideModal .insideModal form > div:nth-child(even) {
+  margin-top: 20px;
+}
+
+.newProfile {
+  margin-left: 60%;
+  width: 40%;
+}
+
+@media (max-width: 850px) {
+  .newProfile {
+    margin: auto;
+    padding: 350px 0 75px 0;
+  }
+}
+
+@media (max-width: 750px) {
+  .newProfile {
+    width: 80%;
+  }
+}
+
+.orgHero h2 {
+  color: #fff;
+  margin: 55px;
+  font-size: 48pt;
+}
+
+.orgEvents {
+  clear: both;
+  margin-top: 300px;
+}
+
+.orgEvent {
+  overflow: hidden;
+}
+
+.orgEvent:hover {
+  background-color: rgba(10, 33, 38, 0.9);
+  color: #fff;
+}
+
+.editIcon, .deleteIcon {
+  font-size: 14pt;
+  display: block;
+  padding: 5px;
+}
+
+.editIcon {
+  margin: 20px 40px;
+}
+
+.deleteIcon {
+  margin-top: 20px;
+}
+
+.title {
+  position: relative;
+}
+
+.title h3 {
+  display: inline-block;
+}
+
+.title a {
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  right: 0;
+  font-size: 10pt;
+  color: blue;
+  text-decoration: underline;
+}
+
+.title a .fa {
+  font-size: 12pt;
+  padding: 10px 10px;
+}
+
+.west, .east {
+  width: 47%;
+  display: inline-block;
+  float: left;
+  font-size: 16pt;
+}
+
+@media (max-width: 750px) {
+  .west, .east {
+    width: 100%;
+    float: left;
+  }
+}
+
+.west a, .east a {
+  display: inline-block;
+  font-size: 14pt;
+  color: blue;
+  text-decoration: underline;
+  float: right;
+  margin-right: 40px;
+}
+
+.west .inputField, .east .inputField {
+  margin-top: 20px;
+  float: left;
+  clear: both;
+}
+
+.west .inputField > div, .east .inputField > div {
+  padding: 10px 0;
+}
+
+.west button, .east button {
+  float: right;
+  background-color: #A6FFD4;
+  border: none;
+  padding: 10px;
+  margin: 50px;
+}
+
+.east {
+  border-left: 2px dashed #aaa;
+  padding-left: 40px;
+}
+
+@media (max-width: 750px) {
+  .east {
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
+.east a {
+  margin-right: 0px;
+}
+
+.state, .zipcode {
+  width: 50%;
+}
+
+.zipcode label, .zipcode input {
+  width: 200px;
+}
+
+.addEvent {
+  overflow: hidden;
+}
+
+.addEvent button {
+  float: right;
+  margin: 50px;
+}
+
+.mission div:nth-child(2) {
+  padding-right: 50px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+@media (max-width: 650px) {
+  .mission div:nth-child(2) {
+    padding: 0 0;
+  }
+}
+
+.inputContainer {
+  height: 90px;
+}
+
+.inputContainer .left, .inputContainer .right {
+  float: left;
+}
+
+.inputContainer .left {
+  width: 250px;
+}
+
+.inputContainer .right {
+  margin-left: 50%;
+  margin-top: -76px;
+}
+
+.userHero {
+  background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(60, 50, 50, 0.5)), url("../images/header.png");
+}
+
+.userInfo {
+  background-color: #fff;
+  padding: 50px;
+  overflow: hidden;
+  border: 1px solid #000;
+  transform: translateY(-200px);
+}
+
+.userInfo .checkbox {
+  margin-top: 30px;
+  width: 30%;
+  display: inline-block;
+}
+
+.userInfo .checkbox input {
+  width: 20px;
+}
+
+.yourNeeds {
+  position: relative;
+  margin-top: -80px;
+}
+
+.yourNeeds button {
+  position: absolute;
+  bottom: 0;
+  right: 150px;
+}
+
+.notification {
+  position: relative;
+  margin-top: -100px;
+}
+
+.notification button {
+  position: absolute;
+  bottom: 0;
+  right: 150px;
+}
+
+.mainMap {
+  padding: 20px;
+  width: 960px;
+  height: 500px;
+  margin: auto;
+}
+
+.mainMap .angular-google-map-container {
+  height: 500px;
+}
+
+.hero.events {
+  height: 800px;
+  position: relative;
+}
+
+.hero.events img {
+  margin: 50px;
+  width: 75%;
+}
+
+.headInfo {
+  background-color: rgba(10, 33, 38, 0.9);
+  position: relative;
+}
+
+@media (max-width: 750px) {
+  .headInfo {
+    height: 120px;
+  }
+}
+
+.headInfo h1 {
+  font-size: 36pt;
+  display: inline-block;
+  margin-left: 10%;
+  color: #fff;
+}
+
+.headInfo .fa {
+  color: #fff;
+}
+
+.headInfo .sortBy {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+}
+
+@media (max-width: 750px) {
+  .headInfo .sortBy {
+    margin-top: 50px;
+  }
+}
+
+.headInfo .sortBy label {
+  color: #fff;
+  font-size: 16pt;
+}
+
+.headInfo .sortBy select {
+  margin-left: 10px;
+  width: 200px;
+  background-color: #fff;
+  font-size: 18pt;
+  line-height: 50pt;
+}
+
+.events {
+  background-color: grey;
+}
+
+.events > div {
+  background-color: #fff;
+}
+
+.events .event {
+  overflow: hidden;
+}
+
+@media (max-width: 750px) {
+  .events .event .sortBy {
+    margin-top: 100px;
+    background-color: pink;
+  }
+  .events .event h3 {
+    width: 100%;
+    border-right: none;
+  }
+  .events .event .fa {
+    display: none;
+  }
+  .events .event span {
+    padding: 0 10px 0 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .events .event h3 {
+    width: 100%;
+  }
+}
+
+.events .event:hover {
+  background-color: rgba(10, 33, 38, 0.9);
+  color: #fff;
+}
+
+.date {
+  padding: 20px;
+  float: left;
+  clear: left;
+  display: inline-block;
+  width: 15%;
+  text-align: center;
+}
+
+.date .fa {
+  padding: 0;
+}
+
+.info {
+  margin-left: 20%;
+  width: 80%;
+  min-height: 150px;
+  position: relative;
+  padding: 20px 30px;
+  border-left: 2px dashed #aaa;
+}
+
+.info h3 {
+  width: 50%;
+  padding-right: 20px;
+  display: inline-block;
+  border-right: 1px dashed #aaa;
+}
+
+@media (max-width: 750px) {
+  .info h3 {
+    width: 100%;
+    padding-right: 0;
+    border-right: none;
+  }
+}
+
+.info .shortDescription {
+  padding-top: 10px;
+  width: 83%;
+}
+
+.info span {
+  padding-left: 20px;
+  font-size: 18pt;
+}
+
+@media (max-width: 750px) {
+  .info span {
+    padding-left: 0;
+    display: inline;
+  }
+}
+
+.info .fa {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media (max-width: 750px) {
+  .info .fa {
+    display: none;
+  }
+}
+
+.eachEvent {
+  background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(60, 50, 50, 0.5)), url("../images/disaster-relief.png");
+  height: 550px;
+  background-color: orange;
+}
+
+.selectedEvent .event {
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 1px solid #aaa;
+}
+
+.selectedEvent .event h2 {
+  display: inline-block;
+}
+
+.eventDetails, .orgInfo {
+  overflow: hidden;
+  padding: 40px;
+}
+
+@media (max-width: 650px) {
+  .eachMap {
+    display: none;
+  }
+}
+
+.leftColumn {
+  width: 60%;
+  float: left;
+}
+
+@media (max-width: 650px) {
+  .leftColumn {
+    width: 100%;
+  }
+}
+
+.leftColumn img {
+  width: 100%;
+}
+
+.eachInfo {
+  clear: both;
+  padding-top: 20px;
+}
+
+.leftHalf {
+  width: 30%;
+  float: left;
+  clear: both;
+}
+
+.rightHalf {
+  margin-left: 33%;
+  width: 70%;
+}
+
+@media (max-width: 650px) {
+  .rightHalf {
+    float: left;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.rightColumn {
+  margin-left: 65%;
+  width: 35%;
+}
+
+@media (max-width: 650px) {
+  .rightColumn {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.rightColumn .date {
+  margin-left: 0;
+}
+
+.rightColumn .date .fa {
+  font-size: 18pt;
+}
+
+.rightColumn .contactInfo {
+  padding: 20px 65px;
+}
+
+.rightColumn .info {
+  border-left: none;
+  padding: 20px 0 0 20px;
+}
+
+.rightColumn .info h3 {
+  border-right: none;
+}
+
+.rightColumn .info span {
+  font-size: 16pt;
+  padding: 20px 0 0;
+}
+
+.orgInfo {
+  width: 100%;
+  background-color: #fff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.addEvent {
+  margin-top: -100px;
+}
+
+.eachMap {
+  float: left;
+  width: 60%;
+  height: 250px;
+}

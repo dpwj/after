@@ -1,8 +1,8 @@
 <!doctype html>
-<html ng-app="fullSail">
+<html ng-app="after">
   <head>
     <meta charset="utf-8">
-    <title>fullSail</title>
+    <title>After</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -21,11 +21,31 @@
   </head>
   <body>
     <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+
+    <div class="header">
+      <div class="logo">
+        <a href="#/home">AFTER</a>
+      </div>
+      <nav>
+
+        <a href="/#/signup">Sign up</a>
+        <a href="/#/login">Log in</a>
+        <a href="#">About Us</a>
+
+      </nav>
+    </div>
 
     <div ui-view></div>
 
+    <footer class="mainFooter">
+      <i class="fa fa-facebook-square"></i>
+      <i class="fa fa-twitter-square"></i>
+      <i class="fa fa-google-plus-square"></i>
+      <i class="fa fa-instagram"></i>
+
+      <span>© ALL RIGHTS RESERVE BY AFTER.COM 2016</span>
+    </footer>
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
     <!-- run `gulp inject` to automatically populate bower script dependencies -->

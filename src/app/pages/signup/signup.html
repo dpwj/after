@@ -1,0 +1,101 @@
+<body>
+<header>
+    <div class="logo">
+        <a href="#/home">AFTER</a>
+    </div>
+    <nav>
+        <a href="/#/signup">Sign up</a>
+        <a href="/#/login">Log in</a>
+        <a href="/#/orgs">Organizations</a>
+        <a href="/#/events">Events</a>
+
+    </nav>
+</header>
+<div class="hero">
+
+    <section>
+        <h1>Create and Account</h1>
+
+    </section>
+</div>
+
+<div class="panel">
+    <div class="outsideModal">
+        <div class="insideModal">
+            <div class="formHeader">
+                <h3>Create your personal account</h3>
+
+            </div>
+            <form ng-submit="add(user)">
+                <span> If you already have an After Account, <a href="/#/login">log-in.</a></span>
+                <div>
+                    <label for="fname">First Name</label>
+                </div>
+                <div>
+                    <input type="text" name="fname" id="fname" ng-model="user.fname">
+                </div>
+
+                <div>
+                    <label for="lname">Last Name</label>
+                </div>
+                <div>
+                    <input type="text" name="lname" id="lname" ng-model="user.lname">
+                </div>
+
+                <div>
+                    <label for="email">Email Address</label>
+                </div>
+                <div>
+                    <input type="email" name="email" id="email" ng-model="user.email">
+                </div>
+
+                <div>
+                    <label for="password">Password </label>
+                </div>
+                <div>
+                    <input type="password" name="password" id="password" ng-model="user.password">
+                </div>
+
+                <div>
+                    <label for="phone">Phone Number</label>
+                </div>
+                <div>
+                    <input type="phone" name="phone" id="phone" ng-model="user.phone">
+                </div>
+
+                <div>
+                    <label for="address">Address</label>
+                </div>
+                <div>
+                    <input type="address" name="address" id="address" ng-model="user.address">
+                </div>
+                <div>
+                    <label for="zipcode">Zipcode</label>
+                </div>
+                <div>
+                    <input type="zipcode" name="zipcode" id="zipcode" ng-model="user.zipcode">
+                </div>
+
+                <div class='chooseType'>
+                    <h4>Are you a? </h4>
+                    <!-- 	<div>
+                            <label for="victim">Victim</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="org" id="victim" ng-model="user.victim" value="1">
+                        </div> -->
+                    <div>
+                        <label for="organization">Organization</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="org" id="organization" ng-model="user.victim" value="0">
+                    </div>
+                </div>
+
+                <button>Next</button>
+
+
+            </form>
+        </div>
+    </div>
+</body>

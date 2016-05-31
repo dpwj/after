@@ -1,0 +1,92 @@
+<h1>Event</h1>
+
+<body>
+<header>
+    <div class="logo">
+        <a href="#/home">AFTER</a>
+    </div>
+    <nav>
+        <a href="#/home">Log Out</a>
+        <a href="/#/orgs/1/user/1"><i class="fa fa-user"></i>Profile</a>
+        <a href="/#/orgs">Organizations</a>
+        <a href="/#/events">Events</a>
+
+    </nav>
+</header>
+<div class="hero eachEvent" ng-repeat="event in event ">
+    <div class='selectedEvent panel'>
+        <div class="event">
+            <div class='date'>
+                <h5>{{ event.date | date:'MMM' }}</h5>
+                <h3>{{ event.date | date:'dd' }}</h3>
+                <h5 class="day">{{ event.date | date:'EEE' }}</h5>
+            </div>
+            <div class="info">
+                <h3> {{ event.event_name }}</h3>
+                <span>{{ event.start_time | date:'shortTime' }}</span> -
+                <span>{{ event.end_time | date:'shortTime'}}</span>
+                <div class="shortDescription">
+                    {{ event.description }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<main class='panel events'>
+    <div>
+        <section class="eventDetails">
+
+            <div ng-controller='EventMapCtrl' class='mainMap eachMap' id='map'>
+            </div>
+            <figure class="leftColumn">
+            </figure>
+
+            <div class="rightColumn" ng-repeat="event in event">
+                <h3>Contact Info</h3>
+                <hr>
+                <div class="event">
+                    <div class='date'>
+                        <i class="fa fa-phone"></i>
+                    </div>
+                    <div class="contactInfo">
+                        <span>{{ event.phone }}</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="event">
+                    <div class='date'>
+                        <i class="fa fa-envelope-o"></i>
+                    </div>
+                    <div class="contactInfo">
+                        <span>{{ event.email }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="eachInfo" ng-repeat="event in event | limitTo:1">
+                <div class="leftHalf">
+                    <h3>Location</h3>
+                    <p>{{ event.address }}</p>
+                    <p>
+                        <span> {{ event.city }} </span>,
+                        <span> {{ event.state }}</span>
+                        <span> {{ event.zipcode}} </span>
+                    </p>
+                </div>
+                <div class="rightHalf">
+                    <h3>Details</h3>
+                    <p>{{ event.details }}</p>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="orgInfo" ng-repeat="event in event	">
+            <div class="">
+                <h3>Organization Mission Statement</h3>
+                <p> {{ event.mission }}</p>
+            </div>
+        </section>
+    </div>
+</main>
+</body>
