@@ -10,20 +10,14 @@
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/navbar/navbar.html',
-      scope: {
-          creationDate: '='
-      },
+      scope: {},
       controller: NavbarController,
-      controllerAs: 'vm',
+      controllerAs: 'ctrl',
       bindToController: true
     };
 
     return directive;
 
-    /** @ngInject */
-    function NavbarController(moment) {
-
-    }
   }
 
 })();
