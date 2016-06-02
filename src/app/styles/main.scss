@@ -1,5 +1,7 @@
 @import 'variables';
 
+$fa-font-path: "../../bower_components/font-awesome/fonts";
+@import "../../../bower_components/font-awesome/scss/font-awesome.scss";
 /****************************************
   Reset
 *****************************************/
@@ -97,16 +99,19 @@ hr {
 
 section {
   padding: 100px 0;
+}
 
-  @media (max-width: 960px) {
+@media (max-width: 960px) {
+  section {
     padding: 100px 50px;
-  }
-
-  @media (max-width: 850px) {
-    padding: 50px 0;
   }
 }
 
+@media (max-width: 850px) {
+  section {
+    padding: 50px 0;
+  }
+}
 
 figure {
   margin: 0;
@@ -139,15 +144,16 @@ input {
   width: 33%;
   display: inline-block;
   vertical-align: top;
-  text-align: center;
+  text-align: content;
+}
 
-  @media (max-width: 850px) {
+@media (max-width: 850px) {
+  .aboutUs figure {
     width: 100%;
     margin: auto;
     text-align: center;
   }
 }
-
 
 .aboutUs figure img {
   border-radius: 50%;
@@ -166,12 +172,13 @@ input {
 .aboutUs figcaption {
   width: 80%;
   margin: auto;
+}
 
-  @media (max-width: 750px) {
+@media (max-width: 750px) {
+  .aboutUs figcaption {
     width: 100%;
   }
 }
-
 
 .aboutUs figcaption h3 {
   font-size: 22pt;
@@ -180,66 +187,69 @@ input {
 .aboutInfo {
   overflow: hidden;
   margin: auto;
+}
 
-  @media (max-width: 960px) {
+@media (max-width: 960px) {
+  .aboutInfo {
     width: 80%;
   }
 }
 
-
 .featuredEvent {
   padding-top: 150px;
+}
 
-  h2 {
-    display: inline-block;
-  }
+.featuredEvent h2 {
+  display: inline-block;
+}
 
-  h2 + button {
-    float: right;
-  }
-
+.featuredEvent h2 + button {
+  float: right;
 }
 
 .smallLeftColumn {
   width: 25%;
   float: left;
-  @media (max-width: 960px) {
+}
+
+@media (max-width: 960px) {
+  .smallLeftColumn {
     width: 20%;
   }
-  @media (max-width: 850px) {
+}
+
+@media (max-width: 850px) {
+  .smallLeftColumn {
     width: 100%;
     margin: auto;
     text-align: center;
     padding: 20px;
   }
-  .img {
-    width: 100%;
-    margin-left: -50px;
-
-    @media (max-width: 850px) {
-      img {
-        width: 50%;
-        margin: auto;
-        text-align: center;
-      }
-    }
-  }
 }
 
+.smallLeftColumn img {
+  width: 100%;
+  margin-left: -50px;
+}
 
-
-
-
+@media (max-width: 850px) {
+  .smallLeftColumn img {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+  }
+}
 
 .smallLeftColumn figcaption {
   margin-top: 50px;
   padding-right: 50px;
+}
 
-  @media (max-width: 960px) {
+@media (max-width: 960px) {
+  .smallLeftColumn figcaption {
     padding: 0;
   }
 }
-
 
 .smallLeftColumn figcaption .fa {
   font-size: 18pt;
