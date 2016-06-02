@@ -34,10 +34,9 @@ a:focus, a:active, button:focus {
 DEFAULTS
 *****************************************/
 body {
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-family: 'Volkhov', serif;
-  font-size: 12pt;
-  color: #0A2126;
+  font-family: 'Robotos', sans-serif;
+  font-size: 16pt;
+
 }
 
 button {
@@ -846,6 +845,8 @@ input {
     display: none;
   }
 }
+
+///////Event
 
 .eachEvent {
   background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(60, 50, 50, 0.5)), url("../images/disaster-relief.png");
