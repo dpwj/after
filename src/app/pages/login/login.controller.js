@@ -3,10 +3,10 @@
 
   angular
     .module('after')
-    .controller('LoginContoller', LoginContoller);
+    .controller('LoginController', LoginController);
 
   /** @ngInject */
-  function LoginContoller($scope) {
+  function LoginController($scope) {
     var ctrl = this;
 
     activate();

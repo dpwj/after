@@ -1,3 +1,5 @@
+@import 'variables';
+
 /****************************************
   Reset
 *****************************************/
@@ -40,14 +42,15 @@ body {
 }
 
 button {
-  background-color: #A6FFD4;
+  background-color: $primary-light;
   border: none;
+  color: $white;
   padding: 10px;
 }
 
 button:hover {
-  background-color: rgba(10, 33, 38, 0.9);
-  color: #7DE0B0;
+  background-color: $primary-background;
+  color: $primary-light;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -87,36 +90,6 @@ a {
   font-size: 28pt;
 }
 
-.panel > div {
-  width: 960px;
-  margin: auto;
-  overflow: hidden;
-}
-
-@media (max-width: 960px) {
-  .panel > div {
-    width: 850px;
-  }
-}
-
-@media (max-width: 850px) {
-  .panel > div {
-    width: 750px;
-  }
-}
-
-@media (max-width: 750px) {
-  .panel > div {
-    width: 400px;
-  }
-}
-
-@media (max-width: 750px) {
-  .panel .userInfo {
-    margin-top: 200px;
-    padding: 20px;
-  }
-}
 
 hr {
   border: 1px dashed #aaa;
@@ -124,19 +97,16 @@ hr {
 
 section {
   padding: 100px 0;
-}
 
-@media (max-width: 960px) {
-  section {
+  @media (max-width: 960px) {
     padding: 100px 50px;
   }
-}
 
-@media (max-width: 850px) {
-  section {
+  @media (max-width: 850px) {
     padding: 50px 0;
   }
 }
+
 
 figure {
   margin: 0;
@@ -169,16 +139,15 @@ input {
   width: 33%;
   display: inline-block;
   vertical-align: top;
-  text-align: content;
-}
+  text-align: center;
 
-@media (max-width: 850px) {
-  .aboutUs figure {
+  @media (max-width: 850px) {
     width: 100%;
     margin: auto;
     text-align: center;
   }
 }
+
 
 .aboutUs figure img {
   border-radius: 50%;
@@ -197,13 +166,12 @@ input {
 .aboutUs figcaption {
   width: 80%;
   margin: auto;
-}
 
-@media (max-width: 750px) {
-  .aboutUs figcaption {
+  @media (max-width: 750px) {
     width: 100%;
   }
 }
+
 
 .aboutUs figcaption h3 {
   font-size: 22pt;
@@ -212,69 +180,66 @@ input {
 .aboutInfo {
   overflow: hidden;
   margin: auto;
-}
 
-@media (max-width: 960px) {
-  .aboutInfo {
+  @media (max-width: 960px) {
     width: 80%;
   }
 }
 
+
 .featuredEvent {
   padding-top: 150px;
-}
 
-.featuredEvent h2 {
-  display: inline-block;
-}
+  h2 {
+    display: inline-block;
+  }
 
-.featuredEvent h2 + button {
-  float: right;
+  h2 + button {
+    float: right;
+  }
+
 }
 
 .smallLeftColumn {
   width: 25%;
   float: left;
-}
-
-@media (max-width: 960px) {
-  .smallLeftColumn {
+  @media (max-width: 960px) {
     width: 20%;
   }
-}
-
-@media (max-width: 850px) {
-  .smallLeftColumn {
+  @media (max-width: 850px) {
     width: 100%;
     margin: auto;
     text-align: center;
     padding: 20px;
   }
-}
+  .img {
+    width: 100%;
+    margin-left: -50px;
 
-.smallLeftColumn img {
-  width: 100%;
-  margin-left: -50px;
-}
-
-@media (max-width: 850px) {
-  .smallLeftColumn img {
-    width: 50%;
-    margin: auto;
-    text-align: center;
+    @media (max-width: 850px) {
+      img {
+        width: 50%;
+        margin: auto;
+        text-align: center;
+      }
+    }
   }
 }
+
+
+
+
+
 
 .smallLeftColumn figcaption {
   margin-top: 50px;
   padding-right: 50px;
-}
 
-@media (max-width: 960px) {
-  .smallLeftColumn figcaption {
+  @media (max-width: 960px) {
     padding: 0;
   }
 }
+
 
 .smallLeftColumn figcaption .fa {
   font-size: 18pt;
@@ -357,116 +322,6 @@ input {
 
 
 
-.outsideModal {
-  width: 1200px;
-  border: 1px solid #000;
-  overflow: hidden;
-  transform: translateY(-150px);
-}
-
-@media (max-width: 625px) {
-  .outsideModal {
-    padding: 0px;
-    transform: translateY(0px);
-    overflow: hidden;
-  }
-}
-
-.outsideModal > div {
-  background-color: #fff;
-  overflow: hidden;
-  padding: 100px;
-}
-
-@media (max-width: 750px) {
-  .outsideModal > div {
-    padding: 0px;
-  }
-}
-
-.outsideModal form {
-  width: 55%;
-  float: left;
-  border-right: 1px dashed #aaa;
-}
-
-.outsideModal form .error {
-  float: left;
-  color: red;
-}
-
-@media (max-width: 850px) {
-  .outsideModal form {
-    width: 100%;
-    border-right: 0;
-  }
-}
-
-@media (max-width: 750px) {
-  .outsideModal form {
-    padding: 40px;
-  }
-}
-
-.outsideModal form h3 {
-  margin-bottom: 1px;
-}
-
-.outsideModal form p {
-  margin: 0 0 20px 0;
-}
-
-.outsideModal form button {
-  margin: 20px 20px 20px 0;
-}
-
-.outsideModal form input {
-  width: 300px;
-}
-
-.outsideModal .insideModal .formHeader {
-  display: inline;
-  margin: auto;
-  text-align: center;
-}
-
-.outsideModal .insideModal .formHeader h3 {
-  padding-bottom: 20px;
-}
-
-.outsideModal .insideModal form {
-  width: 40%;
-  float: none;
-  border: none;
-  margin: auto;
-}
-
-.outsideModal .insideModal form span a {
-  color: blue;
-  text-decoration: underline;
-}
-
-.outsideModal .insideModal form > div:nth-child(even) {
-  margin-top: 20px;
-}
-
-.newProfile {
-  margin-left: 60%;
-  width: 40%;
-}
-
-@media (max-width: 850px) {
-  .newProfile {
-    margin: auto;
-    padding: 350px 0 75px 0;
-  }
-}
-
-@media (max-width: 750px) {
-  .newProfile {
-    width: 80%;
-  }
-}
 
 .orgHero h2 {
   color: #fff;
@@ -560,7 +415,7 @@ input {
 
 .west button, .east button {
   float: right;
-  background-color: #A6FFD4;
+  background-color: $primary-light;
   border: none;
   padding: 10px;
   margin: 50px;

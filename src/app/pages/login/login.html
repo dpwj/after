@@ -1,30 +1,13 @@
-<body>
-<header>
-    <div class="logo">
-        <a href="#/home">AFTER</a>
+<div class="login">
+
+    <div class="hero">
+        <section>
+            <h1>Log in to your account</h1>
+        </section>
     </div>
-    <nav>
-        <a href="/#/signup">Sign up</a>
-        <a href="/#/login">Log in</a>
-        <a href="/#/orgs">Organizations</a>
-        <a href="/#/events">Events</a>
-
-    </nav>
-</header>
-<div class="hero">
-    <section>
-        <h1>Log in to your account</h1>
-
-    </section>
-</div>
-<div class="panel">
-    <div></div>
-
-
     <div class="outsideModal">
         <div class="">
-
-            <form ng-controller="LoginCtrl" ng-submit="submitTheForm(user)">
+            <form ng-submit="submitTheForm(user)">
                 <h3>LOG IN TO MY ACCOUNT</h3>
                 <p> Already have an account? <a href="/#/signup">Just sign in!</a></p>
                 <div>
@@ -42,14 +25,12 @@
                 </div>
 
                 <button><a href="/#/orgs/1/users/1"></a>Log In</button>
-                <span class="error">{{ error.msg }}</span>
-
-
+                <!--<span class="error">{{ error.msg }}</span>-->
             </form>
-
             <div class="newProfile">
                 <h3>NEW TO AFTER?</h3>
-                <p>Create a profile to let us help connect you with the relief you need. You will receive notifications
+                <p>Create a profile to let us help connect you with the relief you need. You will receive
+                    notifications
                     when an organization is in your area providing the services you've requested.</p>
                 <a href="/#/signup">
                     <button>CREATE A PROFILE</button>
@@ -57,8 +38,4 @@
             </div>
         </div>
     </div>
-
-
 </div>
-
-</body>
