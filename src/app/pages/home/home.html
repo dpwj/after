@@ -1,8 +1,10 @@
 <div class="homePage">
-
   <div class="hero text-center">
-
-    <input type="number" maxlength="5" placeholder="ZIPCODE">
+    <form name='zipcode' ng-submit="ctrl.processZipcode(ctrl.zipcode)">
+       <div>
+         <input type="number" maxlength="5" placeholder="ZIPCODE" ng-model="ctrl.zipcode">
+         <div class="errorMessage" ng-if="ctrl.error">Zipcode must contain 5 digits</div>
+       </div>
+    </form>
   </div>
-
 </div>

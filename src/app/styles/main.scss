@@ -30,8 +30,15 @@ img {
   border: 0;
 }
 
-a:focus, a:active, button:focus {
+a:focus, a:active, a:hover, button:focus {
   outline: 0;
+  text-decoration: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /****************************************
@@ -52,7 +59,7 @@ button {
 
 button:hover {
   background-color: $primary-background;
-  color: $primary-light;
+  color: $white;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -131,207 +138,13 @@ input {
   width: 400px;
 }
 
-.aboutUs, .eventTypes {
-  background-color: #f1f1f1;
+.errorMessage {
+  color: red;
+  font-size: .85em;
+  text-align: left;
 }
 
-.aboutUs {
-  text-align: center;
-  padding: 100px 0;
-}
-
-.aboutUs figure {
-  width: 33%;
-  display: inline-block;
-  vertical-align: top;
-  text-align: content;
-}
-
-@media (max-width: 850px) {
-  .aboutUs figure {
-    width: 100%;
-    margin: auto;
-    text-align: center;
-  }
-}
-
-.aboutUs figure img {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-}
-
-@media (max-width: 750px) {
-  .aboutUs figure img {
-    border-radius: 0px;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-.aboutUs figcaption {
-  width: 80%;
-  margin: auto;
-}
-
-@media (max-width: 750px) {
-  .aboutUs figcaption {
-    width: 100%;
-  }
-}
-
-.aboutUs figcaption h3 {
-  font-size: 22pt;
-}
-
-.aboutInfo {
-  overflow: hidden;
-  margin: auto;
-}
-
-@media (max-width: 960px) {
-  .aboutInfo {
-    width: 80%;
-  }
-}
-
-.featuredEvent {
-  padding-top: 150px;
-}
-
-.featuredEvent h2 {
-  display: inline-block;
-}
-
-.featuredEvent h2 + button {
-  float: right;
-}
-
-.smallLeftColumn {
-  width: 25%;
-  float: left;
-}
-
-@media (max-width: 960px) {
-  .smallLeftColumn {
-    width: 20%;
-  }
-}
-
-@media (max-width: 850px) {
-  .smallLeftColumn {
-    width: 100%;
-    margin: auto;
-    text-align: center;
-    padding: 20px;
-  }
-}
-
-.smallLeftColumn img {
-  width: 100%;
-  margin-left: -50px;
-}
-
-@media (max-width: 850px) {
-  .smallLeftColumn img {
-    width: 50%;
-    margin: auto;
-    text-align: center;
-  }
-}
-
-.smallLeftColumn figcaption {
-  margin-top: 50px;
-  padding-right: 50px;
-}
-
-@media (max-width: 960px) {
-  .smallLeftColumn figcaption {
-    padding: 0;
-  }
-}
-
-.smallLeftColumn figcaption .fa {
-  font-size: 18pt;
-  padding: 0 9px 0 0;
-}
-
-.smallLeftColumn span {
-  padding: 10px 0;
-}
-
-.largeRightColumn {
-  width: 75%;
-  float: right;
-  overflow: hidden;
-}
-
-@media (max-width: 960px) {
-  .largeRightColumn {
-    width: 60%;
-    margin-right: 100px;
-  }
-}
-
-@media (max-width: 850px) {
-  .largeRightColumn {
-    width: 100%;
-    float: left;
-  }
-}
-
-@media (max-width: 750px) {
-  .largeRightColumn {
-    width: 100%;
-    padding: 20px;
-    margin: auto;
-    float: left;
-  }
-}
-
-.largeRightColumn img {
-  width: 100%;
-}
-
-@media (max-width: 960px) {
-  .largeRightColumn img {
-    width: 100%;
-  }
-}
-
-.largeRightColumn figure {
-  width: 32%;
-  vertical-align: top;
-  display: inline-block;
-}
-
-@media (max-width: 750px) {
-  .largeRightColumn figure {
-    width: 100%;
-    float: left;
-    margin-top: 50px;
-  }
-}
-
-.largeRightColumn figure img {
-  width: 100%;
-}
-
-@media (max-width: 750px) {
-  .largeRightColumn figure img {
-    height: 100%;
-    text-align: center;
-  }
-}
-
-.largeRightColumn figure figcaption {
-  padding: 10px 20px;
-  background-color: #fff;
-}
-
-
-
-
+/////////////////
 
 .orgHero h2 {
   color: #fff;

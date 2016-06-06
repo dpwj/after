@@ -1,13 +1,15 @@
 
 footer {
-  padding-top: 15px;
   background: #2C3E50;
+  bottom: 0;
+  color: #60a0ae;
   font-family: 'SOG-Montserrat', sans-serif;
   font-weight: bold;
   font-size: 1rem;
+  padding-top: 15px;
+  position: relative;
   text-transform: uppercase;
-  color: #60a0ae;
-  overflow: hidden;
+  width: 100%;
 }
 
 footer .fa {

@@ -6,14 +6,20 @@
     .controller('HomeController', HomeController);
 
   /** @ngInject */
-  function HomeController($timeout, toastr) {
+  function HomeController($state) {
     var ctrl = this;
 
+    ctrl.processZipcode = processZipcode;
 
-    activate();
+    function processZipcode(zipcode) {
+      var length = zipcode.toString().length;
 
-    function activate() {
+
+      if (length < 5 || length > 5) {
+        ctrl.error = true;
+      } else {
+        $state.go('events', {}, 'reload: true');
+      }
     }
-
   }
 })();

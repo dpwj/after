@@ -1,101 +1,128 @@
-<body>
-<header>
-    <div class="logo">
-        <a href="#/home">AFTER</a>
+<div class="signUpForm">
+
+    <div class="hero">
+
+        <section>
+            <h1>Create and Account</h1>
+
+        </section>
     </div>
-    <nav>
-        <a href="/#/signup">Sign up</a>
-        <a href="/#/login">Log in</a>
-        <a href="/#/orgs">Organizations</a>
-        <a href="/#/events">Events</a>
 
-    </nav>
-</header>
-<div class="hero">
-
-    <section>
-        <h1>Create and Account</h1>
-
-    </section>
-</div>
-
-<div class="panel">
-    <div class="outsideModal">
-        <div class="insideModal">
+    <div class="formContainer">
+        <div class="form">
             <div class="formHeader">
-                <h3>Create your personal account</h3>
-
+                <h3>Create an Account</h3>
+                <span> If you already have an Account, <a href="/#/login">log-in.</a></span>
             </div>
-            <form ng-submit="add(user)">
-                <span> If you already have an After Account, <a href="/#/login">log-in.</a></span>
-                <div>
-                    <label for="fname">First Name</label>
-                </div>
-                <div>
-                    <input type="text" name="fname" id="fname" ng-model="user.fname">
-                </div>
+            <form>
+                <h3>Organization Information</h3>
 
-                <div>
-                    <label for="lname">Last Name</label>
-                </div>
-                <div>
-                    <input type="text" name="lname" id="lname" ng-model="user.lname">
-                </div>
-
-                <div>
-                    <label for="email">Email Address</label>
-                </div>
-                <div>
-                    <input type="email" name="email" id="email" ng-model="user.email">
-                </div>
-
-                <div>
-                    <label for="password">Password </label>
-                </div>
-                <div>
-                    <input type="password" name="password" id="password" ng-model="user.password">
-                </div>
-
-                <div>
-                    <label for="phone">Phone Number</label>
-                </div>
-                <div>
-                    <input type="phone" name="phone" id="phone" ng-model="user.phone">
-                </div>
-
-                <div>
-                    <label for="address">Address</label>
-                </div>
-                <div>
-                    <input type="address" name="address" id="address" ng-model="user.address">
-                </div>
-                <div>
-                    <label for="zipcode">Zipcode</label>
-                </div>
-                <div>
-                    <input type="zipcode" name="zipcode" id="zipcode" ng-model="user.zipcode">
-                </div>
-
-                <div class='chooseType'>
-                    <h4>Are you a? </h4>
-                    <!-- 	<div>
-                            <label for="victim">Victim</label>
+                <div class="row">
+                    <div class="component">
+                        <div class="label">
+                            <label for="orgName">Organization Name</label>
                         </div>
                         <div>
-                            <input type="radio" name="org" id="victim" ng-model="user.victim" value="1">
-                        </div> -->
-                    <div>
-                        <label for="organization">Organization</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="org" id="organization" ng-model="user.victim" value="0">
+                            <input type="text" id="orgName">
+                        </div>
                     </div>
                 </div>
 
-                <button>Next</button>
+                <div class="row">
+                    <div class="component">
+                        <div class="label">
+                            <label for="address">Address</label>
+                        </div>
+                        <div>
+                            <input type="text" id="address">
+                        </div>
+                    </div>
+                    <div class="component">
+                        <div class="label">
+                            <label for="zipcode">Zipcode</label>
+                        </div>
+                        <div>
+                            <input type="number" id="zipcode">
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="adminInfo">Administrators Information</h3>
+
+
+                <div class="row">
+                    <div class="component">
+                        <div class="label">
+                            <label for="userName">User Name</label>
+                        </div>
+                        <div>
+                            <input type="text" id="userName">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="component">
+                        <div class="label">
+                            <label for="password">Password</label>
+                        </div>
+                        <div>
+                            <input type="text" id="password">
+                        </div>
+                    </div>
+                    <div class="component">
+                        <div class="label">
+                            <label for="cpassword">Confirm Password</label>
+                        </div>
+                        <div>
+                            <input type="number" id="cpassword">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="component">
+                        <div class="label">
+                            <label for="firstName">First Name</label>
+                        </div>
+                        <div>
+                            <input type="text" id="firstName">
+                        </div>
+                    </div>
+                    <div class="component">
+                        <div class="label">
+                            <label for="lastName">Last Name</label>
+                        </div>
+                        <div>
+                            <input type="text" id="lastName">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="component">
+                        <div class="label">
+                            <label for="emailAddress">Email Address</label>
+                        </div>
+                        <div>
+                            <input type="text" id="emailAddress">
+                        </div>
+                    </div>
+                    <div class="component">
+                        <div class="label">
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        <div>
+                            <input type="text" id="phone">
+                        </div>
+                    </div>
+                </div>
+
+
+                <button class="signUpBtn"><a href="http://">Signup</a></button>
 
 
             </form>
         </div>
     </div>
-</body>
+</div>
