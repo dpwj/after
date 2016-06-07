@@ -4,37 +4,42 @@
         <section>
             <h1>Log in to your account</h1>
         </section>
-    </div>
-    <div class="outsideModal">
-        <div class="">
-            <form ng-submit="submitTheForm(user)">
-                <h3>LOG IN TO MY ACCOUNT</h3>
-                <p> Already have an account? <a href="/#/signup">Just sign in!</a></p>
-                <div>
-                    <label for="email">Emall Address</label>
-                </div>
-                <div>
-                    <input type="email" name="email" id="email" ng-model='user.email'>
-                </div>
+        <div class="outsideModal">
+            <div class="">
+                <form ng-submit="ctrl.submitLoginForm(user)">
+                    <h3>LOG IN TO MY ACCOUNT</h3>
+                    <div class="row">
+                        <div>
+                            <label for="email">Emall Address</label>
+                        </div>
+                        <div>
+                            <input type="email" name="email" id="email" ng-model='user.email'>
+                        </div>
+                    </div>
 
-                <div>
-                    <label for="password">Password</label>
-                </div>
-                <div>
-                    <input type="password" name="password" id="password" ng-model='user.password'>
-                </div>
+                    <div class="row">
+                        <div>
+                            <label for="password">Password</label>
+                        </div>
+                        <div>
+                            <input type="password" name="password" id="password" ng-model='user.password'>
+                        </div>
+                    </div>
+                    <div class="errorMessage loginError"
+                         ng-if="ctrl.loginError">Email or password are not valid. <p> Please try again</p></div>
 
-                <button><a href="/#/orgs/1/users/1"></a>Log In</button>
-                <!--<span class="error">{{ error.msg }}</span>-->
-            </form>
-            <div class="newProfile">
-                <h3>NEW TO AFTER?</h3>
-                <p>Create a profile to let us help connect you with the relief you need. You will receive
-                    notifications
-                    when an organization is in your area providing the services you've requested.</p>
-                <a href="/#/signup">
-                    <button>CREATE A PROFILE</button>
-                </a>
+                    <button class="row"><a href="/#/orgs/1/users/1"></a>LOG IN</button>
+                    <!--<span class="error">{{ error.msg }}</span>-->
+                </form>
+                <div class="newProfile">
+                    <h3>NEW TO AFTER?</h3>
+                    <p>Create a profile to let us help connect you with the relief you need. You will receive
+                        notifications
+                        when an organization is in your area providing the services you've requested.</p>
+                    <a href="/#/signup">
+                        <button>CREATE A PROFILE</button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

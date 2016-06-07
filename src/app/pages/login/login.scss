@@ -3,49 +3,64 @@
     background-color: $secondary-background;
     background-image: url('../../../assets/images/storm1.png');
     background-size: cover;
-    height: 1000px;
-    width:100%;
+    height: 900px;
+    width: 100%;
+
+    section {
+      padding: 100px 0 40px 0;
+
+    }
 
     h1 {
       color: $white;
       text-align: center;
     }
-  }
 
-  .outsideModal {
-    width: 960px;
-    margin: auto;
-    margin-top: -40%;
-    overflow: hidden;
+    form {
+      position: relative;
+      height: 330px;
 
-    @media (max-width: 1024px) {
-      width: 850px;
-      margin-top: -60%;
+      h3 {
+        margin-left: 15px;
+      }
+      button {
+        position: absolute;
+        bottom: 0;
+      }
     }
 
-    @media (max-width: 850px) {
-      margin-top: -75%;
-      width: 650px;
+    .row {
+      margin: 20px 0 0 15px;
+    }
+
+    .outsideModal {
+      border: 1px solid #000;
+      margin: auto;
+      overflow: hidden;
+      width: 960px;
+
+      @media (max-width: 1024px) {
+        width: 850px;
+        margin-top: -60%;
+      }
+
+      @media (max-width: 850px) {
+        margin-top: -75%;
+        width: 650px;
+      }
+
+      @media (max-width: 750px) {
+        width: 400px;
+      }
     }
 
     @media (max-width: 750px) {
-      width: 400px;
+      .panel .userInfo {
+        margin-top: 200px;
+        padding: 20px;
+      }
     }
   }
-
-  @media (max-width: 750px) {
-    .panel .userInfo {
-      margin-top: 200px;
-      padding: 20px;
-    }
-  }
-}
-
-.outsideModal {
-  width: 1200px;
-  border: 1px solid #000;
-  overflow: hidden;
-  transform: translateY(-150px);
 }
 
 @media (max-width: 625px) {
@@ -59,7 +74,7 @@
 .outsideModal > div {
   background-color: #fff;
   overflow: hidden;
-  padding: 100px;
+  padding: 60px;
 }
 
 @media (max-width: 750px) {
@@ -135,8 +150,20 @@
 }
 
 .newProfile {
+  position: relative;
+  height: 330px;
   margin-left: 60%;
   width: 40%;
+
+  p {
+    font-size: .9em;
+    margin-top: 20px;
+  }
+
+  button {
+    position: absolute;
+    bottom: 0;
+  }
 
   @media (max-width: 850px) {
     margin: auto;
