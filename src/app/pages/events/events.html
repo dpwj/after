@@ -1,49 +1,30 @@
-<body>
+<div class="events">
+    <div class="hero events">
+        <section>
+            <div class="mainMap" id="map"></div>
+        </section>
+    </div>
 
-<div class="hero events">
-    <section>
-        <div class="mainMap" id="map"></div>
-    </section>
-</div>
+    <main class='row'>
+        <div class="contained">
 
-<main class='panel events'>
-    <div>
-        <div class=headInfo>
+            <div class="eventsHeader">
+                <h1>Events</h1>
 
-            <h1>Events</h1>
+                <div class="sortBy">
+                    <label for="sort" class='sort'>Sort By:</label>
+                    <select name="date" id="date" ng-model="sortOrder">
+                        <option value="start_time">Earliest Time</option>
+                        <option value="-start_time"> Latest Time</option>
+                        <option value="date">Date</option>
+                    </select>
 
-            <div class="sortBy">
-                <label for="sort" class='sort'>Sort By:</label>
-                <select name="date" id="date" ng-model="sortOrder">
-                    <option value="start_time">Earliest Time</option>
-                    <option value="-start_time"> Latest Time</option>
-                    <option value="date">Date</option>
-                </select>
-
+                </div>
             </div>
+
+
+            <af-event-component></af-event-component>
+
         </div>
-
-
-        <a href="/#/event/{{ event.event_id }}" ng-repeat="event in events | orderBy:sortOrder">
-            <div class="event" data-event-id="{{ event.event_id }}">
-                <div class='date'>
-                    <h5>{{ event.date | date:'MMM' }}</h5>
-                    <h3>{{ event.date | date:'dd' }}</h3>
-                    <h5 class="day">{{ event.date | date:'EEE' }}</h5>
-                </div>
-                <div class="info">
-                    <h3> {{ event.event_name }}</h3>
-                    <span>{{ event.start_time | date:'h:mm a' }}</span>
-                    <span>{{ event.end_time | date:'shortTime'  }}</span>
-                    <div class="shortDescription">
-                        {{ event.description }}
-                    </div>
-                    <i class="fa fa-arrow-circle-right"></i>
-                </div>
-            </div>
-        </a>
-    </div>
-    </div>
-</main>
-</body>
-
+    </main>
+</div>

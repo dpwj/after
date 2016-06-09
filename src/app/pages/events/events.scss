@@ -1,0 +1,24 @@
+.events {
+  .hero {
+    background-image: url(../../../assets/images/disaster-relief.jpg);
+    background-size: cover;
+  }
+
+  .contained {
+    margin: auto;
+    width: 960px;
+  }
+
+
+  .mainMap {
+    //background-color: red;
+    background-image: url(../../../assets/images/mapOverview1.jpg);
+  }
+
+  .eventsHeader {
+    background-color: $primary-light;
+    color: $white;
+    margin: 0 auto;
+  }
+
+}
