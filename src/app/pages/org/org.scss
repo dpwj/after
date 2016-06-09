@@ -1,0 +1,78 @@
+.org {
+
+  .hero {
+    background-image: url(../../../assets/images/storm1.png);
+    background-size: cover;
+    height: 810px;
+  }
+
+
+
+  .form {
+    background-color: $white;
+    margin: 180px auto;
+    padding: 20px;
+    width: 75%;
+
+    textarea {
+      border: 1px solid grey;
+      height: 250px;
+      width: 100%;
+    }
+  }
+
+  .orgForm {
+    div>div {
+      display: inline-block;
+    }
+
+    .orgInfo {
+      margin: 20px 0;
+      
+      .context {
+        width: 200px;
+      }
+    }
+
+    .missionStatement {
+      &>div {
+        display: block;
+      }
+    }
+  }
+
+  header {
+    display: flex;
+
+    h2 {
+      display: inline-block;
+    }
+
+    .title {
+      flex: 8 0;
+    }
+
+    .link {
+      flex: 2;
+      text-align: right;
+    }
+
+  }
+
+  .orgEvents {
+    background-color: $primary-light;
+    color: $white;
+    margin: auto;
+    width: 75%;
+
+    header {
+      i:hover {
+        color: $primary-background;
+      }
+    }
+
+    a {
+      color: $white;
+    }
+  }
+}

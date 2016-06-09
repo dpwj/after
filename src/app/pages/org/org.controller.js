@@ -6,7 +6,7 @@
     .controller('OrgController', OrgController);
 
   /** @ngInject */
-  function OrgController($scope) {
+  function OrgController() {
     var ctrl = this;
 
     activate();
