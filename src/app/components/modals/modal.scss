@@ -1,9 +1,10 @@
 .modal-body {
-  background-color: red;
-  
-  .orgform {
-    background-color: green;
 
+  .line {
+    margin: 20px 0;
+  }
+
+  .orgForm {
     textarea {
       height: 300px;
       width: 100%;
@@ -12,5 +13,14 @@
 
   
   .eventForm {
+    height: 700px;
+    
+    .services {
+      border-top: 1px solid #aaa;
+      padding-top: 10px;
+      input {
+        width: 10px;
+      }
+    }
   }
 }

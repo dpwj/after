@@ -23,6 +23,7 @@
         templateUrl: '../../../app/components/modals/eventModal/eventModal.html',
         controller:  'EventModalCtrl',
         controllerAs: 'ctrl',
+        size: 'lg',
         resolve:     {
           items: function () {
             return $scope.items;

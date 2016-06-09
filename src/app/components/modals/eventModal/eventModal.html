@@ -3,9 +3,117 @@
     <h2 ng-if="!ctrl.addEvent">Edit Event</h2>
 </header>
 <div class="modal-body">
-<form name="eventForm" class="eventForm">
+    <form name="eventForm" class="eventForm">
+        <div class="col-sm-5 ">
+            <div class="line">
+                <div>
+                    <label for="name">Name</label>
+                </div>
+                <div>
+                    <input type="text" id="name" name="name" ng-model="ctrl.event.name">
+                </div>
+            </div>
+            <div class="line">
+                <div>
+                    <label for="description">Description:</label>
+                </div>
+                <div>
+                    <input type="text" id="description" name="description"
+                           ng-model="ctrl.event.description">
+                </div>
+            </div>
+            <div class="line">
+                <div class="line">
+                    <label for="location">Location:</label>
+                </div>
+                <div class="line">
+                    <input type="text" id="location" name="address" ng-model="ctrl.event.address"
+                           placeholder="Address">
+                </div>
+                <div class="line">
+                    <input type="zip" id="zipcode" name="zipcode" ng-model="ctrl.event.zipcode"
+                           placeholder="Zipcode">
+                </div>
+                <div class="line">
+                    <input type="text" id="lat" name="lat" ng-model="ctrl.event.lat"
+                           placeholder="Latitude">
+                </div>
+                <div class="line">
+                    <input type="text" id="long" name="long" ng-model="ctrl.event.long"
+                           placeholder="Longitude">
+                </div>
+            </div>
+        </div>
 
-</form>
+        <div class="col-sm-6 pull-right">
+            <div class="line">
+                <div>
+                    <label>Date:</label>
+                </div>
+                <div><input type="date" placeholder="date" name="date" ng-model="ctrl.event.date"></div>
+            </div>
+
+            <div class="line">
+                <span class="line">
+                    <label>Start Time:</label> {{ ctrl.event.startTime | date:'shortTime' }}
+                    <uib-timepicker ng-model="ctrl.event.startTime"></uib-timepicker>
+                </span>
+                <span class="line">
+                    <label>End Time: </label> {{ ctrl.event.endTime | date:'shortTime' }}
+                    <uib-timepicker ng-model="ctrl.event.endTime"></uib-timepicker>
+                </span>
+            </div>
+        </div>
+
+        <div class="services col-sm-12">
+            <div><label>Services:</label></div>
+
+            <div class="col-sm-4">
+                <div>
+                    <input type="checkbox" id="clothing" name="clothing">
+                    <label for="clothing">Clothing</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="food">
+                    <label for="food">Food</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="medical">
+                    <label for="medical">Medical</label>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div>
+                    <input type="checkbox" id="repair" name="repair">
+                    <label for="repair">Repair</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="debris">
+                    <label for="debris">Debris Removal</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="mold">
+                    <label for="mold">Mold</label>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div>
+                    <input type="checkbox" id="construction">
+                    <label for="construction">Construction</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="insurance">
+                    <label for="insurance">Insurance</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="finacial">
+                    <label for="finacial">Financial</label>
+                </div>
+            </div>
+        </div>
+
+    </form>
 </div>
 <div class="modal-footer">
     <button type="button" class="cancel" ng-click="ctrl.dismiss()">Cancel</button>
