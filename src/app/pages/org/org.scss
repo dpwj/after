@@ -3,7 +3,7 @@
   .hero {
     background-image: url(../../../assets/images/storm1.png);
     background-size: cover;
-    height: 810px;
+    height: 800px;
   }
 
 
@@ -13,8 +13,8 @@
     margin: 180px auto;
     padding: 20px;
     width: 75%;
-
   }
+
   .textarea {
     border: 1px solid grey;
     height: 250px;
@@ -23,8 +23,6 @@
   }
 
   .orgForm {
-    //padding-left: 10px;
-
     div>div {
       display: inline-block;
     }

@@ -1,0 +1,40 @@
+.event {
+  margin: auto;
+  width: 80%;
+
+  .row {
+    padding-top: 40px;
+
+    .eventComponent {
+      background-color: $white !important;
+      
+      .entry {
+        background-color: lightgrey;
+      }
+    }
+  }
+
+  .contactInfo {
+    padding: 0 50px;
+
+    h3 {
+      color: $primary-light;
+    }
+
+    .fa {
+      color: $primary-light;
+      padding: 0 10px;
+    }
+
+    .description {
+      margin-top: 50px;
+    }
+  }
+
+  .eventMap {
+    background-image: url(../../../assets/images/mapOverview.png);
+    height: 500px;
+    width: 50%;
+  }
+  
+}
