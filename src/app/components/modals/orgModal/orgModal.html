@@ -1,0 +1,51 @@
+<header class="modal-header">
+    <h2>Edit Your Organization Information</h2>
+</header>
+<body class="modal-body">
+
+<form name="orgForm" class="orgForm">
+    <div>
+        <div><label for="orgName">Organization Name:</label></div>
+        <div>
+            <input id="orgName" type="text" placeholder="Organization Name"
+                   name="orgName" ng-model="ctrl.org.name">
+        </div>
+    </div>
+    <div>
+        <div><label for="contact">Contact:</label></div>
+        <div>
+            <input id="contact" type="text" placeholder="First & Last Name"
+                   name="contact" ng-model="ctrl.org.contact">
+        </div>
+    </div>
+    <div>
+        <div><label for="phone">Phone:</label></div>
+        <div>
+            <input id="phone" type="tel" placeholder="123-123-1234"
+                   name="phone" ng-model="ctrl.org.phone">
+        </div>
+    </div>
+    <div>
+        <div><label for="email">Email: </label></div>
+        <div>
+            <input id="email" type="email" placeholder="LastOrg@org.com"
+                   name="email" ng-model="ctrl.org.email">
+        </div>
+    </div>
+    <div>
+        <div><label for="mission">Mission Statement</label></div>
+        <div>
+            <textarea id="mission" type="textarea"
+                      name="mission" ng-model="ctrl.org.mission"></textarea>
+        </div>
+    </div>
+
+</form>
+</body>
+
+<div class="modal-footer">
+    <button type="button" class="cancel" ng-click="ctrl.dismiss()">Cancel</button>
+    <button type="button" class="save" ng-click="ctrl.saveInfo(orgForm)">Save</button>
+</div>
+
+</div>

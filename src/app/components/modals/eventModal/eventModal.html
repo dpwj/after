@@ -1,0 +1,13 @@
+<header class="modal-header">
+    <h2 ng-if="ctrl.addEvent">Add Event</h2>
+    <h2 ng-if="!ctrl.addEvent">Edit Event</h2>
+</header>
+<div class="modal-body">
+<form name="eventForm" class="eventForm">
+
+</form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="cancel" ng-click="ctrl.dismiss()">Cancel</button>
+    <button type="button" class="save" ng-click="ctrl.saveInfo(eventForm)">Save</button>
+</div>
