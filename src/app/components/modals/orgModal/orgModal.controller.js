@@ -19,6 +19,8 @@
 
     function saveInfo(form) {
       console.log(form);
+
+      $uibModalInstance.close();
     }
   }
 })();

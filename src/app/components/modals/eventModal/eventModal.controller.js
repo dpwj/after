@@ -22,6 +22,8 @@
     function saveInfo(formData) {
       console.log(formData);
 
+
+      $uibModalInstance.close();
     }
   }
 })();
