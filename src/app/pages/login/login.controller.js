@@ -6,21 +6,14 @@
     .controller('LoginController', LoginController);
 
   /** @ngInject */
-  function LoginController() {
+  function LoginController(AuthService) {
+
     var ctrl = this;
 
-    ctrl.submitLoginForm = submitLoginForm;
+    ctrl.login = login;
 
-    activate();
-
-    function activate() {
-
-    }
-
-    function submitLoginForm(form) {
-      console.log(form);
-
-      ctrl.loginError = false;
+    function login(form) {
+      AuthService.login(form);
     }
   }
 })();

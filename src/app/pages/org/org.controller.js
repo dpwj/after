@@ -6,7 +6,7 @@
     .controller('OrgController', OrgController);
 
   /** @ngInject */
-  function OrgController($scope, $uibModal) {
+  function OrgController($scope, $uibModal, AuthService) {
     var ctrl = this;
 
     ctrl.addEvent          = addEvent;
@@ -15,7 +15,7 @@
     activate();
 
     function activate() {
-
+      AuthService.isLoggedIn();
     }
 
     function addEvent() {

@@ -44,6 +44,9 @@
 
       <span>© ALL RIGHTS RESERVE BY AFTER.COM 2016</span>
     </footer>
+
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
     <!-- run `gulp inject` to automatically populate bower script dependencies -->
@@ -60,5 +63,18 @@
     <!-- endinject -->
     <!-- endbuild -->
 
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey:        "AIzaSyCXlMQvVpC-HdBM-EZqYsrVSBYuxRa2u6s",
+        authDomain:    "after-5e492.firebaseapp.com",
+        databaseURL:   "https://after-5e492.firebaseio.com",
+        storageBucket: "after-5e492.appspot.com"
+      };
+      firebase.initializeApp(config);
+    </script>
   </body>
 </html>
+
+

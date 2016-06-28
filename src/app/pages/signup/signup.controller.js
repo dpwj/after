@@ -6,7 +6,7 @@
     .controller('SignupController', SignupController);
 
   /** @ngInject */
-  function SignupController($state) {
+  function SignupController(AuthService) {
     var ctrl = this;
 
     ctrl.processSignUpForm = processSignUpForm;
@@ -22,7 +22,7 @@
       var zipcodeLength = form.zipcode.$modelValue.toString().length;
       zipcodeLength > 5 || zipcodeLength < 5? ctrl.zipcodeError = true : ctrl.zipcodeError = false;
       if (!ctrl.zipcodeError){
-        $state.go('org');
+        AuthService.signup(form)
       }
 
     }
