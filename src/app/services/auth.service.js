@@ -17,19 +17,21 @@
 
     function isLoggedIn() {
       console.log('test');
-      var firebaseUser = $firebaseAuth.$getAuth();
-      console.log(firebaseUser.uid);
-      if(firebaseUser){
-        console.log(firebaseUser);
-        return firebaseUser
-      } else {
-        return
-      }
+      firebase.auth().onAuthStateChanged(function (user) {
+        if(user){
+          console.log(user)
+          return user
+        } else {
+          console.log("not logged in");
+          return
+        }
+      });
     }
 
     function login(userInfo) {
       $firebaseAuth().$signInWithEmailAndPassword(userInfo.email, userInfo.password)
-        .then(function () {
+        .then(function (ref) {
+          console.log(ref);
           $state.go('org');
         }).catch(function (error) {
         $log.error("Authentication failed:", error.message);
