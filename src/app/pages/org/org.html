@@ -11,23 +11,23 @@
                 <div class="orgForm">
                     <div class="orgInfo">
                         <div class="context"> Organization Name:</div>
-                        <div> name</div>
+                        <div> {{ctrl.org.orgName}}</div>
                     </div>
                     <div class="orgInfo">
                         <div class="context">Contact:</div>
-                        <div>  First Last Name </div>
+                        <div> {{ctrl.org.firstName}} {{ctrl.org.lastName}} </div>
                     </div>
                     <div class="orgInfo">
                         <div class="context">Phone:</div>
-                        <div>123-123-1234</div>
+                        <div>{{ctrl.org.phone}}</div>
                     </div>
                     <div class="orgInfo">
                         <div class="context">Email: </div>
-                        <div> email@me.com </div>
+                        <div> {{ctrl.org.email}} </div>
                     </div>
                     <div class="orgInfo missionStatement">
                         <div class="context">Mission Statement: </div>
-                        <div class="textarea"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium alias aperiam, consectetur dolor error minus molestiae perspiciatis praesentium quas soluta veniam voluptatibus! Autem culpa fugiat impedit molestiae optio? Adipisci.</div>
+                        <div class="textarea">{{ctrl.org.mission}}</div>
                     </div>
 
                 </div>

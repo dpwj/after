@@ -31,8 +31,8 @@
     function login(userInfo) {
       $firebaseAuth().$signInWithEmailAndPassword(userInfo.email, userInfo.password)
         .then(function (ref) {
-          console.log(ref);
           $state.go('org');
+          return ref;
         }).catch(function (error) {
         $log.error("Authentication failed:", error.message);
       });
