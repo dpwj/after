@@ -14,6 +14,7 @@
 
     function login(form) {
       AuthService.login(form);
+      
     }
   }
 })();

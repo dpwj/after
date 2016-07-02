@@ -6,7 +6,7 @@
     .controller('SignupController', SignupController);
 
   /** @ngInject */
-  function SignupController($firebaseArray, $firebaseAuth, $log, $state) {
+  function SignupController($firebaseArray, $firebaseAuth, $log, $state, AuthService) {
     var ref  = firebase.database().ref().child('orgs');
     var db   = $firebaseArray(ref);
     var ctrl = this;
@@ -41,8 +41,8 @@
               mission:    ''
             });
             
-            
-            
+            AuthService.setCookie(firebaseUser.uid);
+
             $state.go('org');
           }).catch(function (error) {
           $log.error("Error: ", error.message);

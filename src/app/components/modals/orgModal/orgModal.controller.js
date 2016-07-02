@@ -6,37 +6,37 @@
     .controller('OrgModalCtrl', OrgModalCtrl);
 
   /** @ngInject */
-  function OrgModalCtrl($firebaseArray, $firebaseObject, $uibModalInstance) {
-    var ref  = firebase.database().ref('orgs');
-    var db   = $firebaseArray(ref);
+  function OrgModalCtrl($firebaseArray, $firebaseObject, $uibModalInstance, org) {
+
     var ctrl = this;
+    var id = org.$id;
+    ctrl.org = org;
 
     ctrl.dismiss  = $uibModalInstance.dismiss;
     ctrl.saveInfo = saveInfo;
+    console.log(ctrl.org);
 
     activate();
 
     function activate() {
-      ref.orderByChild('email').equalTo("livac@yahoo.com")
-        .once('value', function (snap) {
-          console.log('accounts matching email address', snap.val())
-        });
-      // db.$loaded()
-      //   .then(function (x) {
-      //     console.log(x);
 
-          // var rec = db.$getRecord('-KLVNDe9DEafgRL_0F37');
-          // console.log(rec);
-          // ctrl.org = rec;
-        // })
-        // .catch(function (error) {
-        //   console.log("Error:", error);
-        // });
     }
 
     function saveInfo(form) {
       console.log(form);
-
+      var ref = firebase.database().ref().child('orgs/' + id);
+      ref.update({
+        email:      form.email,
+        firstName:  form.firstName,
+        // lastName:   form.lastName,
+        orgName:    form.orgName,
+        // orgAddress: form.address,
+        // orgZipcode: form.address,
+        phone:      form.phone,
+        userName:   form.userName,
+        userId:     id,
+        mission:    form.mission
+      });
 
       $uibModalInstance.close();
     }

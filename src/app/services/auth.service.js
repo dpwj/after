@@ -10,16 +10,16 @@
 
     return {
       isLoggedIn: isLoggedIn,
-      login: login,
-      signout: signout,
-      signup: signup
+      login:      login,
+      setCookie:  setCookie,
+      signout:    signout,
+      signup:     signup
     };
 
     function isLoggedIn() {
       console.log('test');
       firebase.auth().onAuthStateChanged(function (user) {
-        if(user){
-          console.log(user)
+        if (user) {
           return user
         } else {
           console.log("not logged in");
@@ -31,6 +31,7 @@
     function login(userInfo) {
       $firebaseAuth().$signInWithEmailAndPassword(userInfo.email, userInfo.password)
         .then(function (ref) {
+          setCookie(ref.uid);
           $state.go('org');
           return ref;
         }).catch(function (error) {
@@ -40,7 +41,9 @@
     }
 
     function signout() {
-      $firebaseAuth.$signout()
+      $firebaseAuth.$signout();
+      localStorage.removeItem('userId');
+      $state.go('/')
     }
 
     function signup(user) {
@@ -51,6 +54,11 @@
         }).catch(function (error) {
         $log.error("Error: ", error.message);
       });
+    }
+
+    function setCookie(userId) {
+      console.log(userId);
+      localStorage.setItem("userId", userId);
     }
 
   }

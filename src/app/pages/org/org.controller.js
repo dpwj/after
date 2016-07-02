@@ -10,7 +10,7 @@
     var ref = firebase.database().ref().child('orgs');
 
     var ctrl = this;
-
+    var userId;
     ctrl.addEvent    = addEvent;
     ctrl.editOrgInfo = editOrgInfo;
 
@@ -36,23 +36,24 @@
       });
     }
 
-    function editOrgInfo() {
+    function editOrgInfo(org) {
       console.log('Open Org Modal');
       $uibModal.open({
         templateUrl:  '../../../app/components/modals/orgModal/orgModal.html',
         controller:   'OrgModalCtrl',
         controllerAs: 'ctrl',
-        size:         'lg'
-        // resolve:     {
-        //   items: function () {
-        //     return $scope.items;
-        //   }
-        // }
+        size:         'lg',
+        resolve:     {
+          org: org
+        }
       });
     }
 
     function getOrgInformation() {
-      var ref = firebase.database().ref().child('orgs/'+'-KL_-0FnQUswB00oqHS9');
+      userId = localStorage.getItem('userId');
+      console.log(userId);
+      
+      var ref = firebase.database().ref().child('orgs/'+ userId);
       var obj = $firebaseObject(ref);
       obj.$loaded().then(function (data) {
         console.log(data);
