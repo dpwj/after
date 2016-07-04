@@ -8,12 +8,12 @@
   /** @ngInject */
   function afNavbar() {
     var directive = {
+      bindToController: true,
+      controller: 'NavbarCtrl',
+      controllerAs: 'ctrl',
       restrict: 'E',
       templateUrl: 'app/components/navbar/navbar.html',
-      scope: {},
-      controller: NavbarController,
-      controllerAs: 'ctrl',
-      bindToController: true
+      scope: {}
     };
 
     return directive;

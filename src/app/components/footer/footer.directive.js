@@ -7,14 +7,8 @@
 
   function afFooter() {
     var directive = {
-      bindToController: true,
-
-      controller:   'FooterController',
-      controllerAs: 'ctrl',
-
-      scope: {},
-
-      templateUrl: 'src/app/components/footer/footer.html'
+      restrict: 'E',
+      templateUrl: 'app/components/footer/footer.html'
     };
 
     return directive;
