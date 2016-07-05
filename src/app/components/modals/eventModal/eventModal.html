@@ -10,7 +10,7 @@
                     <label for="name">Name</label>
                 </div>
                 <div>
-                    <input type="text" id="name" name="name" ng-model="ctrl.event.name">
+                    <input type="text" id="name" name="name" ng-model="ctrl.event.eventName">
                 </div>
             </div>
             <div class="line">
@@ -19,7 +19,7 @@
                 </div>
                 <div>
                     <input type="text" id="description" name="description"
-                           ng-model="ctrl.event.description">
+                           ng-model="ctrl.event.eventDescription">
                 </div>
             </div>
             <div class="line">
@@ -27,19 +27,19 @@
                     <label for="location">Location:</label>
                 </div>
                 <div class="line">
-                    <input type="text" id="location" name="address" ng-model="ctrl.event.address"
+                    <input type="text" id="location" name="address" ng-model="ctrl.event.eventAddress"
                            placeholder="Address">
                 </div>
                 <div class="line">
-                    <input type="zip" id="zipcode" name="zipcode" ng-model="ctrl.event.zipcode"
+                    <input type="zip" id="zipcode" name="zipcode" ng-model="ctrl.event.eventZipcode"
                            placeholder="Zipcode">
                 </div>
                 <div class="line">
-                    <input type="text" id="lat" name="lat" ng-model="ctrl.event.lat"
+                    <input type="text" id="lat" name="lat" ng-model="ctrl.event.eventLat"
                            placeholder="Latitude (optional)">
                 </div>
                 <div class="line">
-                    <input type="text" id="long" name="long" ng-model="ctrl.event.long"
+                    <input type="text" id="long" name="long" ng-model="ctrl.event.eventLong"
                            placeholder="Longitude (optional)">
                 </div>
             </div>
@@ -50,17 +50,17 @@
                 <div>
                     <label>Date:</label>
                 </div>
-                <div><input type="date" placeholder="date" name="date" ng-model="ctrl.event.date"></div>
+                <div><input type="date" placeholder="date" name="date" ng-model="ctrl.event.eventDate"></div>
             </div>
 
             <div class="line">
                 <span class="line">
                     <label>Start Time:</label> {{ ctrl.event.startTime | date:'shortTime' }}
-                    <uib-timepicker ng-model="ctrl.event.startTime"></uib-timepicker>
+                    <uib-timepicker ng-model="ctrl.event.eventStartTime"></uib-timepicker>
                 </span>
                 <span class="line">
                     <label>End Time: </label> {{ ctrl.event.endTime | date:'shortTime' }}
-                    <uib-timepicker ng-model="ctrl.event.endTime"></uib-timepicker>
+                    <uib-timepicker ng-model="ctrl.event.eventEndTime"></uib-timepicker>
                 </span>
             </div>
         </div>

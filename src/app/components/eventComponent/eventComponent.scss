@@ -1,7 +1,9 @@
 .eventComponent {
   background-color: $primary-light;
+  color: #000;
   padding: 20px 0;
   width: 100%;
+  
   
   .entry {
     border: solid 1px #000;
@@ -70,10 +72,21 @@
     }
 
     .fa {
+      color: $primary-light;
+      font-size: 1.3em;
       position: absolute;
-      top: 0;
       right: 0;
+      top: 0;
+      
 
+      &:active {
+        border: none;
+      }
+
+      & + .fa {
+        position: absolute;
+        right: 35px;
+      }
       @media (max-width: 750px) {
         display: none;
       }

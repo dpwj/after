@@ -2,8 +2,8 @@
     <div ng-show="events.length <= 0"> No events in your area </div>
 
     <!--<a ng-hide="events.length <=0" href="/#/event/{{ event.event_id }}" ng-repeat="event in events | orderBy:sortOrder">-->
-    <a ng-hide="events.length <=0" href="/#/event" ng-repeat="event in events | orderBy:sortOrder">
-        <div class="entry" data-event-id="{{ event.event_id }}">
+    <a ng-hide="events.length <=0" href="/#/event" ng-repeat="event in events track by $index">
+        <div class="entry" data-event-id="{{ event.event.$id }}">
             <div class='date'>
                 <h5>{{ event.date | date:'MMM' }}</h5>
                 <h3>{{ event.date | date:'dd' }}</h3>
