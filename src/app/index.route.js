@@ -15,7 +15,7 @@
         controllerAs: 'ctrl'
       })
       .state('events', {
-        url: '/events',
+        url: '/events/:id',
         templateUrl: 'app/pages/events/events.html',
         controller: 'EventsController',
         controllerAs: 'ctrl'

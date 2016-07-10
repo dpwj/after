@@ -18,7 +18,7 @@
       if (length < 5 || length > 5) {
         ctrl.error = true;
       } else {
-        $state.go('events', {}, 'reload: true');
+        $state.go('events', {'id': zipcode}, 'reload: true');
       }
     }
   }

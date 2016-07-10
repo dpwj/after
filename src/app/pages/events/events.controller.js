@@ -6,9 +6,10 @@
         .controller('EventsController', EventsController);
     
         /** @ngInject */
-        function EventsController($scope) {
+        function EventsController($scope, $stateParams) {
             var ctrl = this;
-            
+            var eventId = $stateParams.id;
+
             activate();
             
             function activate() {
