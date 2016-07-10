@@ -24,25 +24,23 @@
     }
 
     function saveInfo(form) {
-      console.log(form);
-      console.log(form.date);
-      console.log(typeof form.date);
+      console.log(form.eventDate);
+      console.log(form.eventStartTime.toLocaleTimeString());
       var ref = firebase.database().ref().child('orgs/'+ userId + '/events');
+
 
       $firebaseArray(ref).$add({
         eventName: form.eventName,
         eventDescription: form.eventDescription,
         eventAddress: form.eventAddress,
         eventZipcode: form.eventZipcode,
-        eventDate: form.eventDate,
-        eventStartTime: form.eventStartTime,
-        eventEndTime: form.eventEndTime,
-
+        eventDate: form.eventDate.getUTCDate(),
+        eventStartTime: form.eventStartTime.toLocaleTimeString(),
+        eventEndTime: form.eventEndTime.toLocaleTimeString(),
+        eventService: form.eventService
       });
 
-
-
-      // $uibModalInstance.close();
+      $uibModalInstance.close();
     }
   }
 })();

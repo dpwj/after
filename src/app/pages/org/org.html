@@ -55,21 +55,20 @@
                 <div ng-hide="events.length <=0" href="/#/event" ng-repeat="event in ctrl.events track by $index">
                     <div class="entry" data-event-id="{{ event.event.$id }}">
                         <div class='date'>
-                            <h5>{{ event.date | date:'MMM' }}</h5>
-                            <h3>{{ event.date | date:'dd' }}</h3>
-                            <h5 class="day">{{ event.date | date:'EEE' }}</h5>
+                            <h5>{{ event.eventDate | date:'MMM' }}</h5>
+                            <h3>{{ event.eventDate | date:'dd' }}</h3>
+                            <h5 class="day">{{ event.eventDate | date:'EEE' }}</h5>
                         </div>
                         <div class="info">
                             <a href="/#/event"><h3> {{ event.eventName }}</h3></a>
-                            <span>{{ event.startTime | date:'h:mm a' }}</span>
-                            <span>{{ event.endTime | date:'shortTime'  }}</span>
+                            <span>{{ event.eventStartTime | date:'h:mm ' }}</span>
+                            <span>{{ event.eventEndTime }}</span>
                             <div class="shortDescription">
-                                {{ event.description }}
+                                {{ event.eventDescription }}
                             </div>
                             <!--<i ng-show="0" class="fa fa-arrow-circle-right"></i>-->
                             <i class="fa fa-remove" ng-click="ctrl.remove(event.$id)"></i>
                             <i class="fa fa-pencil" ng-click="ctrl.addEvent(event)"></i>
-                            <button> <i class="fa fa-pencil"></i> </button>
                         </div>
                     </div>
                 </div>

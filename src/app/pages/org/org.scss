@@ -70,10 +70,11 @@
       i:hover {
         color: $primary-background;
       }
+
+      .fa {
+        color: $white;
+      }
     }
 
-    .fa {
-      color: $white;
-    }
   }
 }

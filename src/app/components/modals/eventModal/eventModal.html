@@ -31,7 +31,8 @@
                            placeholder="Address">
                 </div>
                 <div class="line">
-                    <input type="zip" id="zipcode" name="zipcode" ng-model="ctrl.event.eventZipcode"
+                    <input type="number" maxlength="5" minlength="5"
+                           id="zipcode" name="zipcode" ng-model="ctrl.event.eventZipcode"
                            placeholder="Zipcode">
                 </div>
                 <div class="line">
@@ -67,48 +68,46 @@
 
         <div class="services col-sm-12">
             <div><label>Services:</label></div>
-
             <div class="col-sm-4">
                 <div>
-                    <input type="checkbox" id="clothing" name="clothing">
+                    <input type="checkbox" id="clothing" name="clothing" ng-model="ctrl.event.eventService.clothing">
                     <label for="clothing">Clothing</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="food">
+                    <input type="checkbox" id="food" ng-model="ctrl.event.eventService.food">
                     <label for="food">Food</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="medical">
+                    <input type="checkbox" id="medical" ng-model="ctrl.event.eventService.medical">
                     <label for="medical">Medical</label>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div>
-                    <input type="checkbox" id="repair" name="repair">
+                    <input type="checkbox" id="repair" name="repair" ng-model="ctrl.event.eventService.repair">
                     <label for="repair">Repair</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="debris">
+                    <input type="checkbox" id="debris" ng-model="ctrl.event.eventService.debris">
                     <label for="debris">Debris Removal</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="mold">
+                    <input type="checkbox" id="mold" ng-model="ctrl.event.eventService.mold">
                     <label for="mold">Mold</label>
                 </div>
             </div>
-
             <div class="col-sm-4">
                 <div>
-                    <input type="checkbox" id="construction">
+                    <input type="checkbox" id="construction" ng-model="ctrl.event.eventService.construction">
                     <label for="construction">Construction</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="insurance">
+                    <input type="checkbox" id="insurance" ng-model="ctrl.event.eventService.insurance">
                     <label for="insurance">Insurance</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="finacial">
-                    <label for="finacial">Financial</label>
+                    <input type="checkbox" id="financial" ng-model="ctrl.event.eventService.financial">
+                    <label for="financial">Financial</label>
                 </div>
             </div>
         </div>

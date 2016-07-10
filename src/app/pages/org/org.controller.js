@@ -63,6 +63,7 @@
       var list = $firebaseArray(ref);
       list.$loaded()
         .then(function (x) {
+          console.log(x);
           ctrl.events = x;
         })
         .catch(function (error) {
