@@ -26,19 +26,25 @@
     function saveInfo(form) {
       console.log(form.eventDate);
       console.log(form.eventStartTime.toLocaleTimeString());
-      var ref = firebase.database().ref().child('orgs/'+ userId + '/events');
 
-
-      $firebaseArray(ref).$add({
-        eventName: form.eventName,
+      var event = {
+        eventName:        form.eventName,
         eventDescription: form.eventDescription,
-        eventAddress: form.eventAddress,
-        eventZipcode: form.eventZipcode,
-        eventDate: form.eventDate.getUTCDate(),
-        eventStartTime: form.eventStartTime.toLocaleTimeString(),
-        eventEndTime: form.eventEndTime.toLocaleTimeString(),
-        eventService: form.eventService
-      });
+        eventAddress:     form.eventAddress,
+        eventZipcode:     form.eventZipcode,
+        eventDate:        form.eventDate.getUTCDate(),
+        eventStartTime:   form.eventStartTime.toLocaleTimeString(),
+        eventEndTime:     form.eventEndTime.toLocaleTimeString(),
+        eventService:     form.eventService
+      };
+
+      var newKey = firebase.database().ref().push().key;
+
+      var updates = {};
+      updates['/events/'+ newKey] = event;
+      updates['/orgs/'+ userId + '/events/'+ newKey] = event;
+
+      firebase.database().ref().update(updates);
 
       $uibModalInstance.close();
     }

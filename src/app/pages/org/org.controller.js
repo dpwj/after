@@ -53,7 +53,6 @@
       var ref = firebase.database().ref().child('orgs/'+ userId);
       var obj = $firebaseObject(ref);
       obj.$loaded().then(function (data) {
-        console.log(data);
         ctrl.org = data;
       })
     }
@@ -63,7 +62,6 @@
       var list = $firebaseArray(ref);
       list.$loaded()
         .then(function (x) {
-          console.log(x);
           ctrl.events = x;
         })
         .catch(function (error) {
