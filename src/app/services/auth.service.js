@@ -12,7 +12,7 @@
       isLoggedIn: isLoggedIn,
       login:      login,
       setCookie:  setCookie,
-      signout:    signout,
+      signOut:    signOut,
       signup:     signup
     };
 
@@ -40,10 +40,10 @@
 
     }
 
-    function signout() {
-      $firebaseAuth.$signout();
+    function signOut() {
+      $firebaseAuth().$signOut();
       localStorage.removeItem('userId');
-      $state.go('/')
+      $state.go('home')
     }
 
     function signup(user) {

@@ -1,18 +1,26 @@
 (function () {
-  'use strict';
+    'use strict';
 
-  angular
-    .module('after')
-    .controller('NavbarCtrl', NavbarCtrl);
+    angular
+      .module('after')
+      .controller('NavbarCtrl', NavbarCtrl);
 
-  /** @ngInject */
-  function NavbarCtrl($scope) {
-    var ctrl = this;
+    /** @ngInject */
+    function NavbarCtrl($scope, AuthService) {
+      var ctrl = this;
 
-    activate();
+      ctrl.signOut = signOut;
 
-    function activate() {
+      activate();
+
+      function activate() {
+
+      }
+
+      function signOut() {
+        console.log('test');
+        AuthService.signOut()
+      }
 
     }
-  }
-})();
+  })();
