@@ -1,6 +1,24 @@
 <div class="event">
     <div class="row">
-        <af-event-component></af-event-component>
+        <div class="eventComponent">
+            <div ng-show="ctrl.events.length <= 0"> No events in your area</div>
+
+            <div class="entry" data-event-id="{{ ctrl.events.event.$id }}">
+                <div class='date'>
+                    <h5>{{ ctrl.events.eventDate | date:'MMM' }}</h5>
+                    <h3>{{ ctrl.events.eventDate | date:'dd' }}</h3>
+                    <h5 class="day">{{ ctrl.events.eventDate | date:'EEE' }}</h5>
+                </div>
+                <div class="info">
+                    <h3> {{ ctrl.events.eventName }}</h3>
+                    <span>{{ ctrl.events.eventStartTime | date:'h:mm ' }}</span>
+                    <span>{{ ctrl.events.eventEndTime }}</span>
+                    <div class="shortDescription">
+                        {{ ctrl.events.eventDescription }}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="row">
         <div class="map col-sm-6 eventMap"></div>
@@ -9,29 +27,26 @@
                 <h3>Contact Info:</h3>
                 <hr>
                 <p class="address">
-                    123 Address Way
+                    ADDRESS:{{ctrl.events.eventAddress}}
                 </p>
                 <p class="address2">
-                    North City, State, 90210
+                    North City, State, {{ ctrl.events.eventZipcode }}
                 </p>
                 <hr>
                 <p>
                     <i class="fa fa-phone"></i>
-                    <span>816-344-9196</span>
+                    <span>{{ctrl.events.phone}}</span>
                 </p>
                 <hr>
                 <p>
                     <i class="fa fa-at"></i>
-                    <span> email@me.com</span>
+                    <span> EMAIL: ctrl.events.eventEmail</span>
                 </p>
             </div>
             <div class="description">
                 <h3>Description:</h3>
                 <hr>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita in magnam molestiae. Ab,
-                    blanditiis
-                    deserunt facere fuga hic inventore iste laboriosam magni molestiae odit porro, quasi rerum! Alias,
-                    cupiditate recusandae?</p>
+                <p>{{ctrl.events.eventDescription}}</p>
             </div>
         </div>
     </div>

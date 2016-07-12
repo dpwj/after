@@ -60,7 +60,7 @@
                             <h5 class="day">{{ event.eventDate | date:'EEE' }}</h5>
                         </div>
                         <div class="info">
-                            <a href="/#/event"><h3> {{ event.eventName }}</h3></a>
+                            <a ui-sref="event({id: event.$id})"><h3> {{ event.eventName }}</h3></a>
                             <span>{{ event.eventStartTime | date:'h:mm ' }}</span>
                             <span>{{ event.eventEndTime }}</span>
                             <div class="shortDescription">

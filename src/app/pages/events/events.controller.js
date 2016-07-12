@@ -6,14 +6,19 @@
         .controller('EventsController', EventsController);
     
         /** @ngInject */
-        function EventsController($scope, $stateParams) {
+        function EventsController($firebaseObject, $scope, $stateParams) {
             var ctrl = this;
-            var eventId = $stateParams.id;
+            var zipcode = $stateParams.id;
 
             activate();
             
             function activate() {
-            
+                var ref = firebase.database().ref('/events/').orderByChild('eventZipcode');
+                var obj = $firebaseObject(ref);
+                obj.$loaded().then(function (data) {
+                    ctrl.events = data;
+                    console.log(ctrl.events);
+                })
             }
         }
 })();

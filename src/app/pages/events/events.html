@@ -23,7 +23,31 @@
             </div>
 
 
-            <af-event-component></af-event-component>
+            <!--<af-event-component></af-event-component>-->
+            <div class="eventComponent">
+                <div ng-show="events.length <= 0"> No events in your area</div>
+
+                <div ng-hide="events.length <=0" href="/#/event" ng-repeat="event in ctrl.events track by $index">
+                    <div class="entry" data-event-id="{{ event.event.$id }}">
+                        <div class='date'>
+                            <h5>{{ event.eventDate | date:'MMM' }}</h5>
+                            <h3>{{ event.eventDate | date:'dd' }}</h3>
+                            <h5 class="day">{{ event.eventDate | date:'EEE' }}</h5>
+                        </div>
+                        <div class="info">
+                            <a ui-sref="event({id: event.$id})"><h3> {{ event.eventName }}</h3></a>
+                            <span>{{ event.eventStartTime | date:'h:mm ' }}</span>
+                            <span>{{ event.eventEndTime }}</span>
+                            <div class="shortDescription">
+                                {{ event.eventDescription }}
+                            </div>
+                            <!--<i ng-show="0" class="fa fa-arrow-circle-right"></i>-->
+                            <i class="fa fa-remove" ng-click="ctrl.remove(event.$id)"></i>
+                            <i class="fa fa-pencil" ng-click="ctrl.addEvent(event)"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </main>
