@@ -23,7 +23,7 @@
           return user
         } else {
           console.log("not logged in");
-          return
+          signOut();
         }
       });
     }

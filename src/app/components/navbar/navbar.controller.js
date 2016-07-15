@@ -14,11 +14,10 @@
       activate();
 
       function activate() {
-
+        console.log('test');
       }
 
       function signOut() {
-        console.log('test');
         AuthService.signOut()
       }
 

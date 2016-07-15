@@ -6,9 +6,8 @@
     .controller('OrgController', OrgController);
 
   /** @ngInject */
-  function OrgController($firebaseArray, $firebaseObject,  $scope, $uibModal, AuthService) {
+  function OrgController($firebaseArray, $firebaseObject, $scope, $uibModal, AuthService) {
     var ref = firebase.database().ref().child('orgs');
-
     var ctrl = this;
     var userId = localStorage.getItem('userId');
 
