@@ -17,10 +17,9 @@
     };
 
     function isLoggedIn() {
-      console.log('test');
       firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
-          return user
+          return user;
         } else {
           console.log("not logged in");
           signOut();

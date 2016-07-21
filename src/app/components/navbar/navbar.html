@@ -3,10 +3,10 @@
     <a href="#/home">AFTER</a>
   </div>
   <nav>
-    <a href="/#/signup">Sign up</a>
-    <a href="/#/login">Log in</a>
-    <a ng-click="ctrl.signOut()">Sign out</a>
-    <a href="/#/org">Organization</a>
+    <a href="/#/signup" ng-if="!ctrl.loggedIn">Sign up</a>
+    <a href="/#/login" ng-if="!ctrl.loggedIn">Log in</a>
+    <a ng-click="ctrl.signOut()" ng-if="ctrl.loggedIn">Sign out</a>
+    <a href="/#/org" ng-if="ctrl.loggedIn" >Organization</a>
     <a href="/#/about-us">About Us</a>
   </nav>
 </div>

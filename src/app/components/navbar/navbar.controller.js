@@ -1,25 +1,35 @@
-(function () {
-    'use strict';
+(function() {
+  'use strict';
 
-    angular
-      .module('after')
-      .controller('NavbarCtrl', NavbarCtrl);
+  angular
+    .module('after')
+    .controller('NavbarCtrl', NavbarCtrl);
 
-    /** @ngInject */
-    function NavbarCtrl($scope, AuthService) {
-      var ctrl = this;
+  /** @ngInject */
+  function NavbarCtrl($scope, AuthService) {
+    var ctrl = this;
 
-      ctrl.signOut = signOut;
+    ctrl.signOut = signOut;
 
-      activate();
+    activate();
 
-      function activate() {
-        console.log('test');
-      }
+    function activate() {
+      console.log('Navbar controller');
 
-      function signOut() {
-        AuthService.signOut()
-      }
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          ctrl.loggedIn = true;
+        } else {
+          ctrl.loggedIn = false;
+          signOut();
+        }
+      });
 
     }
-  })();
+
+    function signOut() {
+      AuthService.signOut()
+    }
+
+  }
+})();
