@@ -34,6 +34,8 @@
           $state.go('org');
           return ref;
         }).catch(function (error) {
+        console.log(error);
+        return error;
         $log.error("Authentication failed:", error.message);
       });
 
