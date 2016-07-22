@@ -27,20 +27,20 @@
                 <h3>Contact Info:</h3>
                 <hr>
                 <p class="address">
-                    ADDRESS:{{ctrl.events.eventAddress}}
+                    {{ctrl.events.eventAddress.street}}
                 </p>
                 <p class="address2">
-                    North City, State, {{ ctrl.events.eventZipcode }}
+                    {{ctrl.events.eventAddress.city}} {{ctrl.events.eventAddress.state}}, {{ ctrl.events.eventZipcode }}
                 </p>
                 <hr>
                 <p>
                     <i class="fa fa-phone"></i>
-                    <span>{{ctrl.events.phone}}</span>
+                    <span>{{ ctrl.events.eventPhone }}</span>
                 </p>
                 <hr>
                 <p>
                     <i class="fa fa-at"></i>
-                    <span> EMAIL: ctrl.events.eventEmail</span>
+                    <span> {{ ctrl.events.eventEmail }}</span>
                 </p>
             </div>
             <div class="description">

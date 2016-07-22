@@ -9,9 +9,10 @@
         <div class="contained">
 
             <div class="eventsHeader">
-                <h1>Events</h1>
+                <h1 ng-if="!ctrl.events.length <= 0">Events</h1>
+                <h2 class="text-center" ng-if="ctrl.events.length <= 0">There currently no events in your area</h2>
 
-                <div class="sortBy">
+                <div ng-show="!ctrl.events.length <= 0" class="sortBy">
                     <label for="sort" class='sort'>Sort By:</label>
                     <select name="date" id="date" ng-model="sortOrder">
                         <option value="start_time">Earliest Time</option>
@@ -25,9 +26,8 @@
 
             <!--<af-event-component></af-event-component>-->
             <div class="eventComponent">
-                <div ng-show="events.length <= 0"> No events in your area</div>
 
-                <div ng-hide="events.length <=0" href="/#/event" ng-repeat="event in ctrl.events track by $index">
+                <div ng-hide="ctrl.events.length <=0" href="/#/event" ng-repeat="event in ctrl.events track by $index">
                     <div class="entry" data-event-id="{{ event.event.$id }}">
                         <div class='date'>
                             <h5>{{ event.eventDate | date:'MMM' }}</h5>
@@ -35,15 +35,12 @@
                             <h5 class="day">{{ event.eventDate | date:'EEE' }}</h5>
                         </div>
                         <div class="info">
-                            <a ui-sref="event({id: event.$id})"><h3> {{ event.eventName }}</h3></a>
+                            <a ui-sref="event({id: event.eventId})"><h3> {{ event.eventName }}</h3></a>
                             <span>{{ event.eventStartTime | date:'h:mm ' }}</span>
                             <span>{{ event.eventEndTime }}</span>
                             <div class="shortDescription">
                                 {{ event.eventDescription }}
                             </div>
-                            <!--<i ng-show="0" class="fa fa-arrow-circle-right"></i>-->
-                            <i class="fa fa-remove" ng-click="ctrl.remove(event.$id)"></i>
-                            <i class="fa fa-pencil" ng-click="ctrl.addEvent(event)"></i>
                         </div>
                     </div>
                 </div>

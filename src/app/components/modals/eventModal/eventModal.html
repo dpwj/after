@@ -27,21 +27,21 @@
                     <label for="location">Location:</label>
                 </div>
                 <div class="line">
-                    <input type="text" id="location" name="address" ng-model="ctrl.event.eventAddress"
+                    <input type="text" id="location" name="address" ng-model="ctrl.event.eventAddress.street"
                            placeholder="Address">
+                </div>
+                <div class="line">
+                    <input type="text" id="city" name="city" ng-model="ctrl.event.eventAddress.City"
+                           placeholder="City ">
+                </div>
+                <div class="line">
+                    <input type="text" id="state" name="state" ng-model="ctrl.event.eventAddress.state"
+                           placeholder="State">
                 </div>
                 <div class="line">
                     <input type="number" maxlength="5" minlength="5"
                            id="zipcode" name="zipcode" ng-model="ctrl.event.eventZipcode"
                            placeholder="Zipcode">
-                </div>
-                <div class="line">
-                    <input type="text" id="lat" name="lat" ng-model="ctrl.event.eventLat"
-                           placeholder="Latitude (optional)">
-                </div>
-                <div class="line">
-                    <input type="text" id="long" name="long" ng-model="ctrl.event.eventLong"
-                           placeholder="Longitude (optional)">
                 </div>
             </div>
         </div>

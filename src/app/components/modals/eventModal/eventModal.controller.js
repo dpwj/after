@@ -6,47 +6,54 @@
     .controller('EventModalCtrl', EventModalCtrl);
 
   /** @ngInject */
-  function EventModalCtrl($firebaseArray, $uibModalInstance, event) {
+  function EventModalCtrl ($firebaseObject, $uibModalInstance, event) {
     var ctrl = this;
 
     ctrl.addEvent = !event;
-    ctrl.event = event;
-    ctrl.dismiss =  $uibModalInstance.dismiss;
+    ctrl.event    = event;
+    ctrl.dismiss  = $uibModalInstance.dismiss;
     ctrl.saveInfo = saveInfo;
-    var userId = localStorage.getItem('userId');
-
-
-    
+    var userId    = localStorage.getItem('userId');
 
     activate();
 
     function activate() {
+
     }
+
 
     function saveInfo(form) {
       console.log(form.eventDate);
       console.log(form.eventStartTime.toLocaleTimeString());
 
-      var event = {
-        eventName:        form.eventName,
-        eventDescription: form.eventDescription,
-        eventAddress:     form.eventAddress,
-        eventZipcode:     form.eventZipcode,
-        eventDate:        form.eventDate.getUTCDate(),
-        eventStartTime:   form.eventStartTime.toLocaleTimeString(),
-        eventEndTime:     form.eventEndTime.toLocaleTimeString(),
-        eventService:     form.eventService
-      };
-
       var newKey = firebase.database().ref().push().key;
 
-      var updates = {};
-      updates['/events/'+ newKey] = event;
-      updates['/orgs/'+ userId + '/events/'+ newKey] = event;
+      var ref = firebase.database().ref().child('orgs/' + userId);
+      var obj = $firebaseObject(ref);
+      obj.$loaded().then(function (org) {
 
-      firebase.database().ref().update(updates);
+        var event = {
+          eventAddress:     form.eventAddress,
+          eventDate:        form.eventDate.getUTCDate(),
+          eventDescription: form.eventDescription,
+          eventEmail:       org.email,
+          eventEndTime:     form.eventEndTime.toLocaleTimeString(),
+          eventId:          newKey,
+          eventName:        form.eventName,
+          eventPhone:       org.phone,
+          eventService:     form.eventService,
+          eventStartTime:   form.eventStartTime.toLocaleTimeString(),
+          eventZipcode:     form.eventZipcode
+        };
 
-      $uibModalInstance.close();
+        var updates                                      = {};
+        updates['/events/' + newKey]                     = event;
+        updates['/orgs/' + userId + '/events/' + newKey] = event;
+
+        firebase.database().ref().update(updates);
+
+        $uibModalInstance.close();
+      })
     }
   }
 })();
