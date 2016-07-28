@@ -39,13 +39,13 @@
     <div class="row">
         <div class="orgEvents">
             <header>
-                <div class="title">
-                    <i class="fa fa-arrow-circle-left"></i>
-                    <h2>July 2016</h2>
-                    <i class="fa fa-arrow-circle-right"></i>
+                <div class="title" style="@media (max-width: 425px) {
+                    font-size: 20pt;
+                }">
+                    <h2 style="margin: 10px 30px 0">July 2016</h2>
                 </div>
                 <div class="link">
-                    <a ng-click="ctrl.addEvent()"><span>Add</span><i class="fa fa-plus" aria-hidden="true"></i></a>
+                    <a ng-click="ctrl.addEvent()"><span style="color: #ffffff; font-size: 34px;">Add</span><i class="fa fa-plus" aria-hidden="true"></i></a>
                 </div>
             </header>
             <!--<af-event-component events="{{ctrl.events}}"></af-event-component>-->

@@ -4,10 +4,9 @@
         <section>
             <h1>Log in to your account</h1>
         </section>
-        <div class="outsideModal">
+        <div class="outsideModal col-sm-10 col-sm-offset-1 col-xs-12">
             <div class="">
-                <div>{{ctrl.data}}</div>
-                <form ng-submit="ctrl.login(user)">
+                <form class="col-sm-6 col-xs-12" ng-submit="ctrl.login(user)">
                     <h3>LOG IN TO MY ACCOUNT</h3>
                     <div class="row">
                         <div>
@@ -30,10 +29,9 @@
                          ng-if="ctrl.loginError">Email or password are not valid. <p> Please try again</p></div>
 
                     <button class="row"><a href="/#/orgs/1/users/1"></a>LOG IN</button>
-                    <!--<span class="error">{{ error.msg }}</span>-->
                 </form>
-                <div class="newProfile">
-                    <h3>NEW TO AFTER?</h3>
+                <div class="newProfile col-md-6 hidden-sm-down">
+                    <h3 class="hidden-md-down ">NEW TO AFTER?</h3>
                     <p>Create a profile to let us help connect you with the relief you need. You will receive
                         notifications
                         when an organization is in your area providing the services you've requested.</p>

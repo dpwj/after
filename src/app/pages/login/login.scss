@@ -35,23 +35,7 @@
 
     .outsideModal {
       border: 1px solid #000;
-      margin: auto;
-      overflow: hidden;
-      width: 960px;
-
-      @media (max-width: 1024px) {
-        width: 850px;
-        margin-top: -60%;
-      }
-
-      @media (max-width: 850px) {
-        margin-top: -75%;
-        width: 650px;
-      }
-
-      @media (max-width: 750px) {
-        width: 400px;
-      }
+      padding: 0;
     }
 
     @media (max-width: 750px) {
@@ -63,13 +47,8 @@
   }
 }
 
-@media (max-width: 625px) {
-  .outsideModal {
-    padding: 0px;
-    transform: translateY(0px);
-    overflow: hidden;
-  }
-}
+
+
 
 .outsideModal > div {
   background-color: #fff;
@@ -84,8 +63,6 @@
 }
 
 .outsideModal form {
-  width: 55%;
-  float: left;
   border-right: 1px dashed #aaa;
 }
 
@@ -134,7 +111,6 @@
 }
 
 .outsideModal .insideModal form {
-  width: 40%;
   float: none;
   border: none;
   margin: auto;
@@ -152,8 +128,10 @@
 .newProfile {
   position: relative;
   height: 330px;
-  margin-left: 60%;
-  width: 40%;
+  
+  @media (max-width: 860px) {
+    color: #ffffff;
+  }
 
   p {
     font-size: .9em;
@@ -163,19 +141,12 @@
   button {
     position: absolute;
     bottom: 0;
-  }
 
-  @media (max-width: 850px) {
-    margin: auto;
-    padding: 350px 0 75px 0;
-  }
-
-  @media (max-width: 750px) {
-    width: 80%;
+    @media (max-width: 860px) {
+      left: 200px;
+    }
   }
 }
-
-
 
 .loginError {
   margin-left: 15px;
